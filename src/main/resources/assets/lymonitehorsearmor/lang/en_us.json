@@ -1,0 +1,35 @@
+{
+  "language": "English",
+  "language.region": "United States",
+  "language.code": "en_us",
+  "author": "Sergey Pekarchik",
+
+  "itemGroup.lymonitehorsearmor": "Lymonite Horse Armor",
+  "itemGroup.main_tab": "Lymonite Horse Armor",
+
+  "item.lymonitehorsearmor.horse_lymonite_armor": "Lymonite Horse Armor",
+  "item.lymonitehorsearmor.horse_lymonite_armor.desc0": "Can be found in Jungle Temples or Woodland Mansions",
+  "item.lymonitehorsearmor.horse_lymonite_armor.desc1": "§f§lPurpose:§r§7 All-purpose armor. Especially good for snowy mountains",
+  "item.lymonitehorsearmor.horse_lymonite_armor.desc2": "",
+  "item.lymonitehorsearmor.horse_lymonite_armor.desc3": "§f§lTraits:§r§7 100% freezing protection. Prevents sinking in Powder Snow. Grants immunity to Poison effect and thorns damage (Sweet Berry Bushes, Cacti)",
+  "item.lymonitehorsearmor.horse_lymonite_armor.desc4": "",
+  "item.lymonitehorsearmor.horse_lymonite_armor.desc5": "",
+  "item.lymonitehorsearmor.horse_lymonite_armor.desc6": "",
+  "item.lymonitehorsearmor.horse_lymonite_armor.desc7": "Armor general stats",
+  "item.lymonitehorsearmor.horse_lymonite_armor.desc8": " Immunity: Freezing, Poison, plant thorns damage",
+  "item.lymonitehorsearmor.horse_lymonite_armor.desc9": " Features: Does not sink in Powder Snow",
+  "item.lymonitehorsearmor.horse_lymonite_armor.desc10": " Weaknesses: Wither and explosions: +50% damage; Wind Charge: +200% damage",
+  "item.lymonitehorsearmor.horse_lymonite_armor.desc11": " Health Boost: 2",
+  "item.lymonitehorsearmor.horse_lymonite_armor.desc12": "",
+  "item.lymonitehorsearmor.horse_lymonite_armor.desc13": "",
+  "item.lymonitehorsearmor.horse_lymonite_armor.desc14": "",
+  "item.lymonitehorsearmor.horse_lymonite_armor.desc15": "",
+  "item.lymonitehorsearmor.horse_lymonite_armor.desc16": "§a Durability resistance: - (not damageable)",
+  "item.lymonitehorsearmor.horse_lymonite_armor.desc17": "",
+  "item.lymonitehorsearmor.horse_lymonite_armor.desc18": "",
+  "item.lymonitehorsearmor.horse_lymonite_armor.desc19": "",
+  "item.lymonitehorsearmor.horse_lymonite_armor.desc20": "",
+  "item.lymonitehorsearmor.horse_lymonite_armor.desc21": "",
+
+  "description.press_shift": "§7Press §9Shift§7 for details..."
+}

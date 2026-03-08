@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.pekar.lymonitehorsearmor.mixins",
+  "compatibilityLevel": "JAVA_13",
+  "mixins": [
+    "PowderSnowBlockMixin"
+  ],
+  "client": [],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "verbose": true,
+  "loggingLevel": "DEBUG"
+}
