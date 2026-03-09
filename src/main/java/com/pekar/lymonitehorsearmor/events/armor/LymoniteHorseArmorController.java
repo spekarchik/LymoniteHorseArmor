@@ -8,7 +8,6 @@ import com.pekar.lymonitehorsearmor.events.animal.IAnimal;
 import com.pekar.lymonitehorsearmor.events.effect.HealthBoostAnimalPermanentArmorEffect;
 import com.pekar.lymonitehorsearmor.events.effect.base.IPermanentArmorEffect;
 import com.pekar.lymonitehorsearmor.events.mob.IMob;
-import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.neoforged.neoforge.event.entity.EntityTravelToDimensionEvent;
@@ -62,16 +61,6 @@ public class LymoniteHorseArmorController extends AnimalArmor
     @Override
     public void onLivingDamageEvent(LivingDamageEvent.Pre event)
     {
-        var damageSource = event.getSource();
-
-        if (damageSource.is(DamageTypes.EXPLOSION) || damageSource.is(DamageTypes.WITHER))
-        {
-            event.setNewDamage(event.getNewDamage() * 1.5F);
-        }
-        else if (damageSource.is(DamageTypes.WIND_CHARGE))
-        {
-            event.setNewDamage(event.getNewDamage() * 3.0F);
-        }
     }
 
     @Override
