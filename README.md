@@ -1,0 +1,101 @@
+# Lymonite Horse Armor – Mountain Riding
+
+Travel through snowy mountains with your horse!
+
+---
+
+## Ride Your Horse Through the Mountains
+
+Horses can be one of the fastest ways to travel in Minecraft.  
+With good breeding or a bit of exploration, players can obtain incredibly fast horses.
+
+However, rough terrain and Powder Snow often make long journeys frustrating.
+
+**Lymonite Horse Armor** allows horses to travel safely through snowy mountains and harsh natural terrain, preventing them from sinking into Powder Snow and protecting them from environmental hazards.
+
+### Features
+
+- ❄ Prevents horses from sinking into **Powder Snow**
+- 🧊 Grants **complete freezing immunity**
+- ❤️ **+4 extra hearts** to horse health
+- 🌵 Immunity to damage from **Sweet Berry Bushes and Cacti**
+- 🛡 Armor strength **between Gold and Diamond horse armor**
+- 🏔 Makes **mountain travel much more comfortable**
+
+The armor has a chance to appear in **Jungle Temple** and **Woodland Mansion** chests.
+
+---
+
+## Lore
+
+**Lymonite** is a rare green-gold material created long ago by ancient jungle tribes.
+
+It is lightweight, moderately durable, and known for its warm golden shimmer and vibrant green color.  
+Unlike traditional metals, Lymonite is believed to contain organic components derived from jungle plants.
+
+The material is deeply connected to the power of nature.  
+Armor forged from Lymonite is said to strengthen the vitality of animals and protect them from the harsh cold of high mountains.
+
+However, the original crafting process has been lost to time.  
+No one knows exactly which plants were used in its creation.
+
+Some rumors claim that woodland raiders have partially rediscovered the ancient formula...
+
+Today, the only known pieces of **Lymonite Horse Armor** are those hidden away in forgotten structures across the world.
+
+---
+
+## ✅ Mod Features
+
+- 🌿 **Jungle-inspired appearance** – bright green armor with a subtle golden shimmer
+- 🧭 **Exploration-focused design** – improves horse travel through mountains, forests, and harsh terrain  
+- 🛡 **Balanced protection** – armor strength sits between Gold and Diamond horse armor  
+- 🎨 **Vanilla-friendly style** – designed to feel like a natural part of Minecraft  
+- 🧩 **Focused design** – adds a single well-defined gameplay feature
+
+---
+
+# 🛠️ Installation and Technical Information
+
+## Installation
+- Make sure you have **Minecraft 1.21.1 - 1.21.11** with **NeoForge** installed.
+- Download the mod `.jar` file.
+- Place it into your `mods` folder.
+- Launch the game and enjoy your adventure!
+
+## Technical Details
+- **Supported NeoForge versions:** 1.21.1, 1.21.3 - 1.21.11
+- **Texture resolution:** 16×16
+- **Localizations:** English, Belarusian, Russian
+
+---
+
+## 🧩 Related Mods
+
+Safe Leash is fully compatible with the following mods by the same author:
+
+- **[🧭 Compass Cleaner](https://www.curseforge.com/minecraft/mc-mods/compass-cleaner)** — adds a minimalist recipe to reset a _Lodestone Compass_ to a regular _Compass_.  
+    Ideal for tidying up obsolete compasses after you lose or remove their lodestone targets.
+
+- **[🔧 EnchantOnce](https://www.curseforge.com/minecraft/mc-mods/enchantonce)** — a minimalistic but powerful rework of enchanting and repairing.  
+  Fixed XP costs, enchanted book duplication, material-based repairs, and perfect gear cloning — all with vanilla-style mechanics.  
+  Fully supports custom gear and enchantments from The Block of Angel mod.
+
+- **[🌟 Pouch & Paper](https://www.curseforge.com/minecraft/mc-mods/pouch-and-paper)** — introduces compact forms of tradeable resources for easier storage and trading:  
+  • paper (stackable and block form),  
+  • ink and glow ink (bottled),  
+  • leather (bundled),  
+  • seeds (in pouches),  
+  • feathers (as compact packs).  
+  Includes the *Burnt Paper Block* — crafted by setting a Paper Block on fire. It attracts creepers and repels bees, perfect for traps and moody builds.
+
+---
+
+## ☕ Support Development
+
+If you enjoy the mod and would like to support future updates and new features, you can support me here:  
+[Buy me a coffee on Ko-fi!](https://ko-fi.com/sergeypekarchik)
+
+Your support means a lot and helps me dedicate more time to creating new content and improving the mod! ❤️
+
+---
