@@ -8,7 +8,6 @@ import com.pekar.lymonitehorsearmor.events.animal.IAnimal;
 import com.pekar.lymonitehorsearmor.events.effect.HealthBoostAnimalPermanentArmorEffect;
 import com.pekar.lymonitehorsearmor.events.effect.base.IPermanentArmorEffect;
 import com.pekar.lymonitehorsearmor.events.mob.IMob;
-import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.neoforged.neoforge.event.entity.EntityTravelToDimensionEvent;
 import net.neoforged.neoforge.event.entity.living.*;
@@ -36,7 +35,6 @@ public class LymoniteHorseArmorController extends AnimalArmor
     public void onLivingHurtEvent(LivingIncomingDamageEvent event)
     {
         var damageSource = event.getSource();
-        var entity = event.getEntity();
         var armor = animal.getAnimalEntity().getBodyArmorItem();
         if (!(armor.getItem() instanceof ModArmor modArmor)) return;
 
@@ -49,11 +47,6 @@ public class LymoniteHorseArmorController extends AnimalArmor
             else if (isPlantThornsDamage(damageSource))
             {
                 event.setCanceled(true);
-            }
-
-            if (entity.hasEffect(MobEffects.POISON))
-            {
-                entity.removeEffect(MobEffects.POISON);
             }
         }
     }
@@ -124,9 +117,5 @@ public class LymoniteHorseArmorController extends AnimalArmor
     @Override
     public void onEffectAddedEvent(MobEffectEvent.Added event)
     {
-        if (event.getEffectInstance().getEffect() == MobEffects.POISON)
-        {
-            animal.getEntity().removeEffect(MobEffects.POISON);
-        }
     }
 }
