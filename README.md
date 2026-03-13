@@ -6,7 +6,7 @@ Travel through snowy mountains with your horse!
 
 ## Ride Your Horse Through the Mountains
 
-Horses can be one of the fastest ways to travel in Minecraft.  
+Horses are one of the fastest ways to travel in Minecraft.  
 With good breeding or a bit of exploration, players can obtain incredibly fast horses.
 
 However, rough terrain and Powder Snow often make long journeys frustrating.
@@ -20,6 +20,7 @@ However, rough terrain and Powder Snow often make long journeys frustrating.
 - ❤️ **+4 extra hearts** to horse health
 - 🌵 Immunity to damage from **Sweet Berry Bushes and Cacti**
 - 🛡 Armor strength **between Gold and Diamond horse armor**
+- 🪂 **50% reduced fall damage** for horses
 - 🏔 Makes **mountain travel much more comfortable**
 
 ### Obtaining
@@ -34,7 +35,7 @@ The armor can be discovered during exploration, or crafted if you uncover the fo
 
 Both the armor and the ingot can appear in **Jungle Temple** and **Woodland Mansion** chests.
 
-### Crafting
+### Crafting Lymonite Horse Armor
 
 Players who explore deeper into the world may rediscover the lost crafting method.
 
@@ -46,8 +47,25 @@ Using a **Smithing Table**, the armor can be crafted with:
 - Lymonite Ingot
 → Lymonite Horse Armor
 
-
 The **Handbook is not consumed** during crafting.
+
+---
+
+## Lymonite Ingots and Mixture
+
+To craft Lymonite Horse Armor, players need **Lymonite Ingots**, which are made from **Lymonite Mixture**.
+
+**Lymonite Mixture** can be crafted using:
+- Raw Gold
+- Resin Clump
+- Vine
+- Torchflower Seeds
+→ Lymonite Mixture (unshaped recipe)
+
+The mixture can then be refined in any furnace:
+- **Smelting or Blasting** Lymonite Mixture → **Lymonite Ingot**
+
+This allows players to craft Lymonite Horse Armor even without finding loot, once they have discovered the ancient formula.
 
 ---
 
@@ -55,15 +73,15 @@ The **Handbook is not consumed** during crafting.
 
 **Lymonite** is a rare green-gold material created long ago by ancient jungle tribes.
 
-It is lightweight, moderately durable, and known for its warm golden shimmer and vibrant green color.  
+It is lightweight, moderately durable, and known for its warm golden shimmer and vibrant green color.
 Unlike traditional metals, Lymonite is believed to contain organic components derived from jungle plants.
 
-The material is deeply connected to the power of nature.  
+The material is deeply connected to the power of nature.
 Armor forged from Lymonite is said to strengthen the vitality of animals and protect them from the harsh cold of high mountains.
+Its unique properties also reduce the impact of falls, making mountain riding safer than ever.
 
-However, the original crafting process has been lost to time.  
+However, the original crafting process has been lost to time.
 No one knows exactly which plants were used in its creation.
-
 Some rumors claim that woodland raiders have partially rediscovered the ancient formula...
 
 Today, the only known pieces of **Lymonite Horse Armor** are those hidden away in forgotten structures across the world.
@@ -73,9 +91,9 @@ Today, the only known pieces of **Lymonite Horse Armor** are those hidden away i
 ## ✅ Mod Features
 
 - 🌿 **Jungle-inspired appearance** – bright green armor with a subtle golden shimmer
-- 🧭 **Exploration-focused design** – improves horse travel through mountains, forests, and harsh terrain  
-- 🛡 **Balanced protection** – armor strength sits between Gold and Diamond horse armor  
-- 🎨 **Vanilla-friendly style** – designed to feel like a natural part of Minecraft  
+- 🧭 **Exploration-focused design** – improves horse travel through mountains, forests, and harsh terrain
+- 🛡 **Balanced protection** – armor strength sits between Gold and Diamond horse armor
+- 🎨 **Vanilla-friendly style** – designed to feel like a natural part of Minecraft
 - 🧩 **Focused design** – adds a single well-defined gameplay feature
 
 ---
