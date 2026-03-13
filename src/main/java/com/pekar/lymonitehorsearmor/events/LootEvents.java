@@ -40,5 +40,17 @@ public class LootEvents implements IEventHandler
             event.getTable().addPool(pool);
             return;
         }
+
+        if (event.getKey().equals(BuiltInLootTables.STRONGHOLD_LIBRARY))
+        {
+            var pool = LootPool.lootPool()
+                    .add(LootItem.lootTableItem(ItemRegistry.HORSE_ARMOR_HANDBOOK).setWeight(1))
+                    .add(EmptyLootItem.emptyItem().setWeight(2))
+                    .setRolls(ConstantValue.exactly(1f))
+                    .build();
+
+            event.getTable().addPool(pool);
+            return;
+        }
     }
 }
