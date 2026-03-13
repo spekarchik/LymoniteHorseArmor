@@ -33,6 +33,11 @@
 
   "item.lymonitehorsearmor.lymonite_ingot": "Lymonite Ingot",
   "item.lymonitehorsearmor.lymonite_ingot.desc1": "Found in Jungle Temples or Woodland Mansions",
+  "item.lymonitehorsearmor.horse_armor_handbook": "Horse Armor Handbook",
+  "item.lymonitehorsearmor.horse_armor_handbook.desc1": "Can be found in Stronghold libraries",
+  "item.lymonitehorsearmor.horse_armor_handbook.desc2": "Smithing Table recipe",
+  "item.lymonitehorsearmor.horse_armor_handbook.desc3": "  The Handbook + Golden Horse Armor + Lymonite Ingot → Lymonite Horse Armor",
+  "item.lymonitehorsearmor.horse_armor_handbook.desc4": "The handbook is not consumed in crafting",
 
   "description.press_shift": "§7Press §9Shift§7 for details..."
 }

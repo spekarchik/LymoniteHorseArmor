@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:item/generated",
+    "textures": {
+        "layer0": "lymonitehorsearmor:item/horse_armor_handbook"
+    }
+}
