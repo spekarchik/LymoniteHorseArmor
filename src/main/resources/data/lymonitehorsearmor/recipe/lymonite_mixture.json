@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:raw_gold",
+    "minecraft:resin_clump",
+    "minecraft:vine",
+    "minecraft:torchflower_seeds"
+  ],
+  "result": {
+    "id": "lymonitehorsearmor:lymonite_mixture",
+    "count": 1
+  }
+}
