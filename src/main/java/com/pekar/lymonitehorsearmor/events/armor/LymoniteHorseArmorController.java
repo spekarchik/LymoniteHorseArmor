@@ -2,13 +2,11 @@ package com.pekar.lymonitehorsearmor.events.armor;
 
 import com.pekar.lymonitehorsearmor.armor.AnimalArmorType;
 import com.pekar.lymonitehorsearmor.armor.ArmorRegistry;
-import com.pekar.lymonitehorsearmor.armor.ModAnimalArmor;
 import com.pekar.lymonitehorsearmor.armor.ModArmor;
 import com.pekar.lymonitehorsearmor.events.animal.IAnimal;
 import com.pekar.lymonitehorsearmor.events.effect.HealthBoostAnimalPermanentArmorEffect;
 import com.pekar.lymonitehorsearmor.events.effect.base.IPermanentArmorEffect;
-import com.pekar.lymonitehorsearmor.events.mob.IMob;
-import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.damagesource.DamageTypes;
 import net.neoforged.neoforge.event.entity.EntityTravelToDimensionEvent;
 import net.neoforged.neoforge.event.entity.living.*;
 
@@ -22,13 +20,6 @@ public class LymoniteHorseArmorController extends AnimalArmor
 
         healthBoostEffect = new HealthBoostAnimalPermanentArmorEffect(animal, this, 1);
         healthBoostEffect.setupAnimal().setupAvailability(this::isArmorPutOn);
-    }
-
-    private boolean isArmorPutOn(IMob mob, IAnimalArmor armor)
-    {
-        var entity = mob.getEntity();
-        var slotItem = entity.getItemBySlot(EquipmentSlot.BODY);
-        return !slotItem.isEmpty() && slotItem.getItem() instanceof ModAnimalArmor modArmor && modArmor.getArmorType() == armor.getArmorType();
     }
 
     @Override
@@ -54,6 +45,12 @@ public class LymoniteHorseArmorController extends AnimalArmor
     @Override
     public void onLivingDamageEvent(LivingDamageEvent.Pre event)
     {
+        var damageSource = event.getSource();
+        if (damageSource.is(DamageTypes.FALL))
+        {
+            var newDamage = event.getNewDamage() * 0.5F;
+            event.setNewDamage(newDamage);
+        }
     }
 
     @Override

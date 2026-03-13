@@ -1,7 +1,9 @@
 package com.pekar.lymonitehorsearmor.events.armor;
 
 import com.pekar.lymonitehorsearmor.armor.AnimalArmorType;
+import com.pekar.lymonitehorsearmor.armor.ModAnimalArmor;
 import com.pekar.lymonitehorsearmor.events.animal.IAnimal;
+import com.pekar.lymonitehorsearmor.events.mob.IMob;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.neoforged.neoforge.event.entity.living.ArmorHurtEvent;
 
@@ -34,6 +36,13 @@ abstract class AnimalArmor extends ArmorBase implements IAnimalArmor
         {
             event.setNewDamage(EquipmentSlot.BODY, durability - 1);
         }
+    }
+
+    protected boolean isArmorPutOn(IMob mob, IAnimalArmor armor)
+    {
+        var entity = mob.getEntity();
+        var slotItem = entity.getItemBySlot(EquipmentSlot.BODY);
+        return !slotItem.isEmpty() && slotItem.getItem() instanceof ModAnimalArmor modArmor && modArmor.getArmorType() == armor.getArmorType();
     }
 
     @Override
