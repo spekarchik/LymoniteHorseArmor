@@ -22,7 +22,32 @@ However, rough terrain and Powder Snow often make long journeys frustrating.
 - 🛡 Armor strength **between Gold and Diamond horse armor**
 - 🏔 Makes **mountain travel much more comfortable**
 
-The armor has a chance to appear in **Jungle Temple** and **Woodland Mansion** chests.
+### Obtaining
+
+The armor can be discovered during exploration, or crafted if you uncover the forgotten knowledge behind it.
+
+**Possible loot:**
+
+- **Lymonite Horse Armor** – 25% chance
+- **Lymonite Ingot** – 25% chance
+- Nothing – 50% chance
+
+Both the armor and the ingot can appear in **Jungle Temple** and **Woodland Mansion** chests.
+
+### Crafting
+
+Players who explore deeper into the world may rediscover the lost crafting method.
+
+A special item called the **Horse Armor Handbook** can be found in **Stronghold Libraries** (33% chance per chest).
+
+Using a **Smithing Table**, the armor can be crafted with:
+- Horse Armor Handbook
+- Golden Horse Armor
+- Lymonite Ingot
+→ Lymonite Horse Armor
+
+
+The **Handbook is not consumed** during crafting.
 
 ---
 
