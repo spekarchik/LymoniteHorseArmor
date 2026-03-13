@@ -1,3 +1,12 @@
+## 📦 Version 1.1.0
+
+### ✨ New
+- **Lymonite Horse Armor** now reduces fall damage by 50%.
+- Added **Lymonite Mixture** and its crafting recipe.
+- Added smelting and blasting recipes: **Lymonite Mixture** → **Lymonite Ingot**.
+- Added Polish localization.
+
+
 ## 📦 Version 1.0.1
 
 ### 📝 Improvements
