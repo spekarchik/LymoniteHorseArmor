@@ -1,0 +1,58 @@
+﻿{
+    "criteria":  {
+                     "item2":  {
+                                   "trigger":  "minecraft:inventory_changed",
+                                   "conditions":  {
+                                                      "items":  [
+                                                                    {
+                                                                        "items":  "lymonitehorsearmor:horse_armor_handbook"
+                                                                    }
+                                                                ]
+                                                  }
+                               },
+                     "item3":  {
+                                   "trigger":  "minecraft:inventory_changed",
+                                   "conditions":  {
+                                                      "items":  [
+                                                                    {
+                                                                        "items":  "lymonitehorsearmor:horse_lymonite_armor"
+                                                                    }
+                                                                ]
+                                                  }
+                               },
+                     "item0":  {
+                                   "trigger":  "minecraft:impossible",
+                                   "conditions":  {
+                                                      "items":  [
+                                                                    {
+                                                                        "items":  "minecraft:golden_horse_armor"
+                                                                    }
+                                                                ]
+                                                  }
+                               },
+                     "item1":  {
+                                   "trigger":  "minecraft:inventory_changed",
+                                   "conditions":  {
+                                                      "items":  [
+                                                                    {
+                                                                        "items":  "lymonitehorsearmor:lymonite_ingot"
+                                                                    }
+                                                                ]
+                                                  }
+                               }
+                 },
+    "parent":  "minecraft:recipes/root",
+    "rewards":  {
+                    "recipes":  [
+                                    "lymonitehorsearmor:horse_lymonite_armor"
+                                ]
+                },
+    "requirements":  [
+                         [
+                             "item2",
+                             "item3",
+                             "item0",
+                             "item1"
+                         ]
+                     ]
+}

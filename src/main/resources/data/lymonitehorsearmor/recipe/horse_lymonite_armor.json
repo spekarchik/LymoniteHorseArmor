@@ -1,0 +1,9 @@
+{
+    "type": "minecraft:smithing_transform",
+    "base": "minecraft:golden_horse_armor",
+    "addition": "lymonitehorsearmor:lymonite_ingot",
+    "result": {
+        "id": "lymonitehorsearmor:horse_lymonite_armor"
+    },
+    "template": "lymonitehorsearmor:horse_armor_handbook"
+}
