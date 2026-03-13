@@ -1,0 +1,43 @@
+{
+  "language": "Беларуская (Кірыліца)",
+  "language.region": "Беларусь",
+  "language.code": "be_by",
+  "author": "Сяргей Пякарчык",
+
+  "itemGroup.lymonitehorsearmor": "Lymonite Horse Armor",
+  "itemGroup.main_tab": "Lymonite Horse Armor",
+
+  "item.lymonitehorsearmor.horse_lymonite_armor": "Лайманітавая конская браня",
+  "item.lymonitehorsearmor.horse_lymonite_armor.desc0": "Сустракаецца ў Храмах у Джунглях ці ў Лясных Асабняках",
+  "item.lymonitehorsearmor.horse_lymonite_armor.desc1": "",
+  "item.lymonitehorsearmor.horse_lymonite_armor.desc2": "",
+  "item.lymonitehorsearmor.horse_lymonite_armor.desc3": "",
+  "item.lymonitehorsearmor.horse_lymonite_armor.desc4": "",
+  "item.lymonitehorsearmor.horse_lymonite_armor.desc5": "",
+  "item.lymonitehorsearmor.horse_lymonite_armor.desc6": "",
+  "item.lymonitehorsearmor.horse_lymonite_armor.desc7": "",
+  "item.lymonitehorsearmor.horse_lymonite_armor.desc8": " - Імунітэт: замярзанне і калючыя расліны",
+  "item.lymonitehorsearmor.horse_lymonite_armor.desc9": " - Не тоне ў Рыхлым снезе",
+  "item.lymonitehorsearmor.horse_lymonite_armor.desc10": "",
+  "item.lymonitehorsearmor.horse_lymonite_armor.desc11": " - Павышэнне здароўя: +4 ❤",
+  "item.lymonitehorsearmor.horse_lymonite_armor.desc12": "",
+  "item.lymonitehorsearmor.horse_lymonite_armor.desc13": "",
+  "item.lymonitehorsearmor.horse_lymonite_armor.desc14": "",
+  "item.lymonitehorsearmor.horse_lymonite_armor.desc15": "",
+  "item.lymonitehorsearmor.horse_lymonite_armor.desc16": "",
+  "item.lymonitehorsearmor.horse_lymonite_armor.desc17": "",
+  "item.lymonitehorsearmor.horse_lymonite_armor.desc18": "",
+  "item.lymonitehorsearmor.horse_lymonite_armor.desc19": "",
+  "item.lymonitehorsearmor.horse_lymonite_armor.desc20": "",
+  "item.lymonitehorsearmor.horse_lymonite_armor.desc21": "",
+
+  "item.lymonitehorsearmor.lymonite_ingot": "Лайманітавы злітак",
+  "item.lymonitehorsearmor.lymonite_ingot.desc1": "Сустракаецца ў Храмах у Джунглях ці ў Лясных Асабняках",
+  "item.lymonitehorsearmor.horse_armor_handbook": "Кіраўніцтва па конскай бранi",
+  "item.lymonitehorsearmor.horse_armor_handbook.desc1": "Сустракаецца ў бібліятэках Крэпасцяў",
+  "item.lymonitehorsearmor.horse_armor_handbook.desc2": "Рэцэпт варштата каваля",
+  "item.lymonitehorsearmor.horse_armor_handbook.desc3": "  Кіраўніцтва + Залатая конская браня + Лайманітавы злітак → Лайманітавая конская браня",
+  "item.lymonitehorsearmor.horse_armor_handbook.desc4": "Кіраўніцтва не расходуецца пры крафце",
+
+  "description.press_shift": "§7Націсніце §9Shift§7 для падрабязнасцей..."
+}

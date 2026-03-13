@@ -1,0 +1,43 @@
+{
+  "language": "Russian",
+  "language.region": "Russia",
+  "language.code": "ru_ru",
+  "author": "Sergey Pekarchik",
+
+  "itemGroup.lymonitehorsearmor": "Lymonite Horse Armor",
+  "itemGroup.main_tab": "Lymonite Horse Armor",
+
+  "item.lymonitehorsearmor.horse_lymonite_armor": "Лаймонитовая конская броня",
+  "item.lymonitehorsearmor.horse_lymonite_armor.desc0": "Встречается в Храмах в Джунглях или в Лесных Особняках",
+  "item.lymonitehorsearmor.horse_lymonite_armor.desc1": "",
+  "item.lymonitehorsearmor.horse_lymonite_armor.desc2": "",
+  "item.lymonitehorsearmor.horse_lymonite_armor.desc3": "",
+  "item.lymonitehorsearmor.horse_lymonite_armor.desc4": "",
+  "item.lymonitehorsearmor.horse_lymonite_armor.desc5": "",
+  "item.lymonitehorsearmor.horse_lymonite_armor.desc6": "",
+  "item.lymonitehorsearmor.horse_lymonite_armor.desc7": "",
+  "item.lymonitehorsearmor.horse_lymonite_armor.desc8": " - Иммунитет: замерзание и колючие растения",
+  "item.lymonitehorsearmor.horse_lymonite_armor.desc9": " - Не тонет в Рыхлом снегу",
+  "item.lymonitehorsearmor.horse_lymonite_armor.desc10": "",
+  "item.lymonitehorsearmor.horse_lymonite_armor.desc11": " - Увеличение здоровья: +4 ❤",
+  "item.lymonitehorsearmor.horse_lymonite_armor.desc12": "",
+  "item.lymonitehorsearmor.horse_lymonite_armor.desc13": "",
+  "item.lymonitehorsearmor.horse_lymonite_armor.desc14": "",
+  "item.lymonitehorsearmor.horse_lymonite_armor.desc15": "",
+  "item.lymonitehorsearmor.horse_lymonite_armor.desc16": "",
+  "item.lymonitehorsearmor.horse_lymonite_armor.desc17": "",
+  "item.lymonitehorsearmor.horse_lymonite_armor.desc18": "",
+  "item.lymonitehorsearmor.horse_lymonite_armor.desc19": "",
+  "item.lymonitehorsearmor.horse_lymonite_armor.desc20": "",
+  "item.lymonitehorsearmor.horse_lymonite_armor.desc21": "",
+
+  "item.lymonitehorsearmor.lymonite_ingot": "Лаймонитовый слиток",
+  "item.lymonitehorsearmor.lymonite_ingot.desc1": "Встречается в Храмах в Джунглях или в Лесных Особняках",
+  "item.lymonitehorsearmor.horse_armor_handbook": "Справочник по лошадиной броне",
+  "item.lymonitehorsearmor.horse_armor_handbook.desc1": "Встречается в библиотеках Крепостей",
+  "item.lymonitehorsearmor.horse_armor_handbook.desc2": "Рецепт кузнечного стола",
+  "item.lymonitehorsearmor.horse_armor_handbook.desc3": "  Справочник + Золотая конская броня + Лаймонитовый слиток → Лаймонитовая конская броня",
+  "item.lymonitehorsearmor.horse_armor_handbook.desc4": "Справочник не расходуется при крафте",
+
+  "description.press_shift": "§7Нажмите §9Shift§7 для подробностей..."
+}
