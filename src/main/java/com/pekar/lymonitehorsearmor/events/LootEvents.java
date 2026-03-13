@@ -1,6 +1,7 @@
 package com.pekar.lymonitehorsearmor.events;
 
 import com.pekar.lymonitehorsearmor.armor.ArmorRegistry;
+import com.pekar.lymonitehorsearmor.items.ItemRegistry;
 import net.minecraft.world.level.storage.loot.BuiltInLootTables;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.entries.EmptyLootItem;
@@ -18,7 +19,8 @@ public class LootEvents implements IEventHandler
         {
             var pool = LootPool.lootPool()
                     .add(LootItem.lootTableItem(ArmorRegistry.HORSE_LYMONITE_ARMOR).setWeight(1))
-                    .add(EmptyLootItem.emptyItem().setWeight(1))
+                    .add(LootItem.lootTableItem(ItemRegistry.LYMONITE_INGOT).setWeight(1))
+                    .add(EmptyLootItem.emptyItem().setWeight(2))
                     .setRolls(ConstantValue.exactly(1f))
                     .build();
 
@@ -30,7 +32,8 @@ public class LootEvents implements IEventHandler
         {
             var pool = LootPool.lootPool()
                     .add(LootItem.lootTableItem(ArmorRegistry.HORSE_LYMONITE_ARMOR).setWeight(1))
-                    .add(EmptyLootItem.emptyItem().setWeight(1))
+                    .add(LootItem.lootTableItem(ItemRegistry.LYMONITE_INGOT).setWeight(1))
+                    .add(EmptyLootItem.emptyItem().setWeight(2))
                     .setRolls(ConstantValue.exactly(1f))
                     .build();
 

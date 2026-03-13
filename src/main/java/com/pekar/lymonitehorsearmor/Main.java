@@ -3,6 +3,7 @@ package com.pekar.lymonitehorsearmor;
 import com.mojang.logging.LogUtils;
 import com.pekar.lymonitehorsearmor.armor.ArmorRegistry;
 import com.pekar.lymonitehorsearmor.events.EventRegistry;
+import com.pekar.lymonitehorsearmor.items.ItemRegistry;
 import com.pekar.lymonitehorsearmor.tab.MainTab;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.CreativeModeTab;
@@ -53,6 +54,7 @@ public class Main
 
     private void initializeRegistry()
     {
+        ItemRegistry.initStatic();
         ArmorRegistry.initStatic();
     }
 

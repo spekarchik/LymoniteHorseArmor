@@ -31,5 +31,8 @@
   "item.lymonitehorsearmor.horse_lymonite_armor.desc20": "",
   "item.lymonitehorsearmor.horse_lymonite_armor.desc21": "",
 
+  "item.lymonitehorsearmor.lymonite_ingot": "Lymonite Ingot",
+  "item.lymonitehorsearmor.lymonite_ingot.desc1": "Found in Jungle Temples or Woodland Mansions",
+
   "description.press_shift": "§7Press §9Shift§7 for details..."
 }
