@@ -7,6 +7,7 @@ import com.pekar.lymonitehorsearmor.utils.Utils;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.component.TooltipDisplay;
 
@@ -16,7 +17,7 @@ public class AnimalArmorHandbook extends ModItem implements ITooltipProvider
 {
     public AnimalArmorHandbook(Properties properties)
     {
-        super(properties);
+        super(properties.rarity(Rarity.UNCOMMON).stacksTo(4));
     }
 
     @Override
