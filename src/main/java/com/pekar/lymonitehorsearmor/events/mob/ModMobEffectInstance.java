@@ -34,14 +34,14 @@ public class ModMobEffectInstance extends MobEffectInstance implements IModMobEf
     }
 
     @Override
-    public boolean tickServer(ServerLevel serverLevel, LivingEntity entity, Runnable onExpirationRunnable)
+    public boolean tick(LivingEntity entity, Runnable onExpirationRunnable)
     {
         if (onEffectEnded != null && getDuration() == 1)
         {
             onEffectEnded.run();
         }
 
-        return super.tickServer(serverLevel, entity, onExpirationRunnable);
+        return super.tick(entity, onExpirationRunnable);
     }
 
     @Override

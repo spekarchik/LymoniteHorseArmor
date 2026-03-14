@@ -5,9 +5,8 @@ import com.pekar.lymonitehorsearmor.tooltip.ITooltipProvider;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
-import net.minecraft.world.item.component.TooltipDisplay;
 
-import java.util.function.Consumer;
+import java.util.List;
 
 public class LymoniteIngot extends ModItem implements ITooltipProvider
 {
@@ -17,9 +16,9 @@ public class LymoniteIngot extends ModItem implements ITooltipProvider
     }
 
     @Override
-    public void appendHoverText(ItemStack stack, TooltipContext context, TooltipDisplay tooltipDisplay, Consumer<Component> tooltipAdder, TooltipFlag flag)
+    public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipAdder, TooltipFlag flag)
     {
-        ITooltipProvider.appendHoverText(this, stack, context, tooltipDisplay, tooltipAdder, flag);
+        ITooltipProvider.appendHoverText(this, stack, context, tooltipAdder, flag);
     }
 
     @Override

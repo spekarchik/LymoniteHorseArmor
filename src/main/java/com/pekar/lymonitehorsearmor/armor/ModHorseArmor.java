@@ -2,6 +2,9 @@ package com.pekar.lymonitehorsearmor.armor;
 
 import com.pekar.lymonitehorsearmor.tooltip.ITooltip;
 import com.pekar.lymonitehorsearmor.tooltip.TextStyle;
+import net.minecraft.core.HolderSet;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.equipment.ArmorType;
@@ -10,7 +13,7 @@ public class ModHorseArmor extends ModAnimalArmor
 {
     public ModHorseArmor(ModArmorMaterial material, ArmorType armorSlotType, AnimalArmorType armorType, Properties properties)
     {
-        super(material, armorSlotType, armorType, properties.horseArmor(material.getMaterial()));
+        super(material, armorSlotType, armorType, material.getMaterial().animalProperties(properties, SoundEvents.HORSE_ARMOR, false, HolderSet.direct(EntityType::builtInRegistryHolder, EntityType.HORSE)));
     }
 
     @Override

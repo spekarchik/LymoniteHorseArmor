@@ -9,9 +9,9 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.TooltipFlag;
-import net.minecraft.world.item.component.TooltipDisplay;
 import net.minecraft.world.item.equipment.ArmorType;
 
+import java.util.List;
 import java.util.function.Consumer;
 
 public abstract class ModArmor extends Item implements ITooltipProvider
@@ -66,8 +66,8 @@ public abstract class ModArmor extends Item implements ITooltipProvider
     }
 
     @Override
-    public final void appendHoverText(ItemStack stack, TooltipContext context, TooltipDisplay display, Consumer<Component> component, TooltipFlag flag)
+    public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag)
     {
-        ITooltipProvider.appendHoverText(this, stack, context, display, component, flag);
+        ITooltipProvider.appendHoverText(this, stack, context, tooltipComponents, tooltipFlag);
     }
 }
