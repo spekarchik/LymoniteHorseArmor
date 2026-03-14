@@ -1,7 +1,7 @@
 package com.pekar.lymonitehorsearmor.utils;
 
-import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.equipment.EquipmentAsset;
 import net.minecraft.world.item.equipment.EquipmentAssets;
 
@@ -12,9 +12,9 @@ public class Resources
 
     }
 
-    public static Identifier createResourceLocation(String namespace, String name)
+    public static ResourceLocation createResourceLocation(String namespace, String name)
     {
-        return Identifier.fromNamespaceAndPath(namespace, name); //was: new ResourceLocation(name),
+        return ResourceLocation.fromNamespaceAndPath(namespace, name); //was: new ResourceLocation(name),
     }
 
     public ResourceKey<EquipmentAsset> createEquipmentResourceKey(String namespace, String armorName)

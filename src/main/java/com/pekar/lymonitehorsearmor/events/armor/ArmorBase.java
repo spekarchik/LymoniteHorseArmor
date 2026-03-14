@@ -4,11 +4,11 @@ import com.pekar.lymonitehorsearmor.utils.Utils;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.animal.bee.Bee;
-import net.minecraft.world.entity.animal.fish.Pufferfish;
+import net.minecraft.world.entity.animal.Bee;
+import net.minecraft.world.entity.animal.Pufferfish;
 import net.minecraft.world.entity.monster.Endermite;
 import net.minecraft.world.entity.monster.Silverfish;
-import net.minecraft.world.entity.monster.spider.Spider;
+import net.minecraft.world.entity.monster.Spider;
 
 abstract class ArmorBase implements IArmor
 {
