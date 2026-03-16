@@ -1,3 +1,9 @@
+## 📦 Version 1.1.1
+
+### 📝 Improvements
+- Now compatible with full range of NeoForge 21.11.x
+
+
 ## 📦 Version 1.1.0
 
 ### 🐞 Fixed
