@@ -20,7 +20,8 @@ public class LootEvents implements IEventHandler
             var pool = LootPool.lootPool()
                     .add(LootItem.lootTableItem(ArmorRegistry.HORSE_LYMONITE_ARMOR).setWeight(1))
                     .add(LootItem.lootTableItem(ItemRegistry.LYMONITE_INGOT).setWeight(1))
-                    .add(EmptyLootItem.emptyItem().setWeight(2))
+                    .add(LootItem.lootTableItem(ItemRegistry.LYMONITE_MIXTURE).setWeight(1))
+                    .add(EmptyLootItem.emptyItem().setWeight(3))
                     .setRolls(ConstantValue.exactly(1f))
                     .build();
 
@@ -33,7 +34,8 @@ public class LootEvents implements IEventHandler
             var pool = LootPool.lootPool()
                     .add(LootItem.lootTableItem(ArmorRegistry.HORSE_LYMONITE_ARMOR).setWeight(1))
                     .add(LootItem.lootTableItem(ItemRegistry.LYMONITE_INGOT).setWeight(1))
-                    .add(EmptyLootItem.emptyItem().setWeight(2))
+                    .add(LootItem.lootTableItem(ItemRegistry.LYMONITE_MIXTURE).setWeight(1))
+                    .add(EmptyLootItem.emptyItem().setWeight(3))
                     .setRolls(ConstantValue.exactly(1f))
                     .build();
 
