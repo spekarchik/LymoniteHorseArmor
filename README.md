@@ -108,7 +108,7 @@ Today, the only known pieces of **Lymonite Horse Armor** are those hidden away i
 - Launch the game and enjoy your adventure!
 
 ## Technical Details
-- **Supported NeoForge versions:** 1.21.1, 1.21.4 - 1.21.11
+- **Supported Minecraft versions:** 1.21.1, 1.21.4 - 1.21.11
 - **Texture resolution:** 16×16
 - **Localizations:** English, Belarusian, Russian, Polish
 - **Loot table compatibility:** the mod does not overwrite vanilla loot tables and injects additional loot rolls via events, making it compatible with mods and datapacks that modify loot tables
