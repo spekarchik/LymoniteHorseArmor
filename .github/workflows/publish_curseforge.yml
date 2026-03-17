@@ -153,19 +153,12 @@ jobs:
             -H "User-Agent: GitHub-Actions"
           )
           echo "$RESPONSE" > response.json
-          
-          echo "=== PRETTY JSON ==="
-          echo "$RESPONSE" | jq .
-          echo "==================="
-          
+
           # --- получаем ID для MOD_LOADER отдельно ---
-          #MOD_LOADER_ID=$(jq -r --arg t "$MOD_LOADER" '
-          #  .[] | select(.name == $t or .slug == ($t | gsub("\\.";"-"))) | .id // empty
-          #' response.json | head -n1)
           MOD_LOADER_ID=$(jq -r --arg t "$MOD_LOADER" '
-            .data[] | select(.name == $t or .slug == ($t | gsub("\\.";"-"))) | .id // empty
+            .[] | select(.name == $t or .slug == ($t | gsub("\\.";"-"))) | .id // empty
           ' response.json | head -n1)
-          
+
           if [ -z "$MOD_LOADER_ID" ]; then
             echo "ERROR: MOD_LOADER ID for '$MOD_LOADER' not found!"
             exit 1
@@ -180,11 +173,8 @@ jobs:
           TAG_ARRAY=("$GAME_VERSION" "${TAG_ARRAY[@]}")
 
           for TAG in "${TAG_ARRAY[@]}"; do
-            #ID=$(jq -r --arg t "$TAG" '
-            #  .[] | select(.name == $t or .slug == ($t | gsub("\\.";"-"))) | .id // empty
-            #' response.json | head -n1)
             ID=$(jq -r --arg t "$TAG" '
-              .data[] | select(.name == $t or .slug == ($t | gsub("\\.";"-"))) | .id // empty
+              .[] | select(.name == $t or .slug == ($t | gsub("\\.";"-"))) | .id // empty
             ' response.json | head -n1)
             if [ -z "$ID" ]; then
               echo "ID for tag '$TAG' not found!"
