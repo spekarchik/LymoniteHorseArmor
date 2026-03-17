@@ -20,7 +20,7 @@ However, rough terrain and Powder Snow often make long journeys frustrating.
 - ❤️ **+4 extra hearts** to horse health
 - 🌵 Immunity to damage from **Sweet Berry Bushes and Cacti**
 - 🛡 Armor strength **between Gold and Diamond horse armor**
-- 🪂 **50% reduced fall damage** for horses
+- 🪂 Horses take **50% less fall damage** in addition to vanilla reduction
 - 🏔 Makes **mountain travel much more comfortable**
 
 ### Obtaining
@@ -29,11 +29,12 @@ The armor can be discovered during exploration, or crafted if you uncover the fo
 
 **Possible loot:**
 
-- **Lymonite Horse Armor** – 25% chance
-- **Lymonite Ingot** – 25% chance
+- **Lymonite Horse Armor** – 17% chance
+- **Lymonite Ingot** – 17% chance
+- **Lymonite Mixture** – 17% chance
 - Nothing – 50% chance
 
-Both the armor and the ingot can appear in **Jungle Temple** and **Woodland Mansion** chests.
+The armor, ingot, and mixture can all appear in **Jungle Temple** and **Woodland Mansion** chests.
 
 ### Crafting Lymonite Horse Armor
 
@@ -57,7 +58,7 @@ To craft Lymonite Horse Armor, players need **Lymonite Ingots**, which are made 
 
 **Lymonite Mixture** can be crafted using:
 - Raw Gold
-- Resin Clump
+- Resin Clump (or Slime Ball in 1.21.1)
 - Vine
 - Torchflower Seeds
 → Lymonite Mixture (unshaped recipe)
@@ -101,15 +102,15 @@ Today, the only known pieces of **Lymonite Horse Armor** are those hidden away i
 # 🛠️ Installation and Technical Information
 
 ## Installation
-- Make sure you have **Minecraft 1.21.1 - 1.21.11** with **NeoForge** installed.
+- Make sure you have **Minecraft 1.21.1, 1.21.4 - 1.21.11** with **NeoForge** installed.
 - Download the mod `.jar` file.
 - Place it into your `mods` folder.
 - Launch the game and enjoy your adventure!
 
 ## Technical Details
-- **Supported NeoForge versions:** 1.21.1, 1.21.3 - 1.21.11
+- **Supported Minecraft versions:** 1.21.1, 1.21.4 - 1.21.11
 - **Texture resolution:** 16×16
-- **Localizations:** English, Belarusian, Russian
+- **Localizations:** English, Belarusian, Russian, Polish
 - **Loot table compatibility:** the mod does not overwrite vanilla loot tables and injects additional loot rolls via events, making it compatible with mods and datapacks that modify loot tables
 
 ---
