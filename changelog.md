@@ -1,7 +1,9 @@
-## 📦 Version 1.1.2
+## 📦 Version 1.2.0
 
 ### 📝 Improvements
 - Clarified horse armor tooltip for fall damage reduction.
+- Added **Lymonite Mixture** as a possible loot item in Jungle Temple and Woodland Mansion chests.
+- Rebalanced Lymonite loot table chances.
 
 
 ## 📦 Version 1.1.0
