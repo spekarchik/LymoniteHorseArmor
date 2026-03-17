@@ -263,7 +263,7 @@ jobs:
               displayName: $displayName,
               releaseType: $releaseType,
               gameVersions: $gameVersions,
-              isMarkedForManualRelease: false
+              isMarkedForManualRelease: true
             }' | jq -c .) # -c делает JSON в одну строку
             
           echo "=== METADATA preview ==="
