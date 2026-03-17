@@ -2,7 +2,7 @@ package com.pekar.lymonitehorsearmor.events.armor;
 
 import com.pekar.lymonitehorsearmor.armor.AnimalArmorType;
 import com.pekar.lymonitehorsearmor.armor.ArmorRegistry;
-import com.pekar.lymonitehorsearmor.armor.ModArmor;
+import com.pekar.lymonitehorsearmor.armor.ModAnimalArmor;
 import com.pekar.lymonitehorsearmor.events.animal.IAnimal;
 import com.pekar.lymonitehorsearmor.events.effect.HealthBoostAnimalPermanentArmorEffect;
 import com.pekar.lymonitehorsearmor.events.effect.base.IPermanentArmorEffect;
@@ -27,7 +27,7 @@ public class LymoniteHorseArmorController extends AnimalArmor
     {
         var damageSource = event.getSource();
         var armor = animal.getAnimalEntity().getBodyArmorItem();
-        if (!(armor.getItem() instanceof ModArmor modArmor)) return;
+        if (!(armor.getItem() instanceof ModAnimalArmor modArmor)) return;
 
         if (armor.is(ArmorRegistry.HORSE_LYMONITE_ARMOR))
         {

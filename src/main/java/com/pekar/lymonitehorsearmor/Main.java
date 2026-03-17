@@ -7,6 +7,7 @@ import com.pekar.lymonitehorsearmor.items.ItemRegistry;
 import com.pekar.lymonitehorsearmor.tab.MainTab;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.inventory.MenuType;
+import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.CreativeModeTab;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -32,6 +33,7 @@ public class Main
     // Create a Deferred Register to hold CreativeModeTabs which will all be registered under the "lymonitehorsearmor" namespace
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> MAIN_TAB = new MainTab().createTab();
+    public static final DeferredRegister<ArmorMaterial> ARMOR_MATERIALS = DeferredRegister.create(Registries.ARMOR_MATERIAL, MODID);
 
     public static final DeferredRegister<MenuType<?>> MENUS = DeferredRegister.create(Registries.MENU, MODID);
 
@@ -43,6 +45,7 @@ public class Main
 
         // Register the Deferred Register to the mod event bus so items get registered
         ITEMS.register(modEventBus);
+        ARMOR_MATERIALS.register(modEventBus);
 
         // Register the Deferred Register to the mod event bus so tabs get registered
         CREATIVE_MODE_TABS.register(modEventBus);

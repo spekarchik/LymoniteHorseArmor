@@ -1,7 +1,9 @@
 {
     "type": "minecraft:smelting",
     "category": "misc",
-    "ingredient": "lymonitehorsearmor:lymonite_mixture",
+    "ingredient": {
+        "item": "lymonitehorsearmor:lymonite_mixture"
+    },
     "result": {
         "id": "lymonitehorsearmor:lymonite_ingot"
     },

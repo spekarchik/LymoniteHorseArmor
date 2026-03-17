@@ -5,23 +5,18 @@ import com.pekar.lymonitehorsearmor.utils.Utils;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.item.TooltipFlag;
-import net.minecraft.world.item.equipment.ArmorType;
+import net.minecraft.world.item.*;
 
 import java.util.List;
-import java.util.function.Consumer;
 
-public abstract class ModArmor extends Item implements ITooltipProvider
+public abstract class ModArmor extends Item implements ITooltipProvider, IModArmor
 {
-    protected final ArmorType armorSlotType;
+    protected final ArmorItem.Type armorSlotType;
     protected final int maxDamage;
     protected final ModArmorMaterial material;
     protected final Utils utils = new Utils();
 
-    public ModArmor(ModArmorMaterial material, ArmorType armorSlotType, Properties properties)
+    public ModArmor(ModArmorMaterial material, ArmorItem.Type armorSlotType, Properties properties)
     {
         super(material.isFireResistant() ? properties.fireResistant() : properties);
         this.armorSlotType = armorSlotType;
@@ -34,14 +29,14 @@ public abstract class ModArmor extends Item implements ITooltipProvider
         return material;
     }
 
-    public ArmorType getArmorSlotType()
+    public ArmorItem.Type getArmorSlotType()
     {
         return armorSlotType;
     }
 
     public int getDefense()
     {
-        return getArmorMaterial().getMaterial().defense().get(getArmorSlotType());
+        return getArmorMaterial().getMaterial().value().defense().get(getArmorSlotType());
     }
 
     public String getArmorFamilyName()

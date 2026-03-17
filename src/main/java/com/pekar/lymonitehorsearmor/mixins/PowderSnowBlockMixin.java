@@ -1,6 +1,6 @@
 package com.pekar.lymonitehorsearmor.mixins;
 
-import com.pekar.lymonitehorsearmor.armor.ModArmor;
+import com.pekar.lymonitehorsearmor.armor.ModAnimalArmor;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.level.block.PowderSnowBlock;
@@ -23,7 +23,7 @@ public abstract class PowderSnowBlockMixin
         if (entity instanceof Animal animal)
         {
             var armor = animal.getBodyArmorItem();
-            if (armor.getItem() instanceof ModArmor modArmor)
+            if (armor.getItem() instanceof ModAnimalArmor modArmor)
             {
                 var returnValue = modArmor.canWalkOnPowderedSnow(armor, animal);
                 cir.setReturnValue(returnValue);

@@ -1,20 +1,19 @@
 package com.pekar.lymonitehorsearmor.armor;
 
 import com.pekar.lymonitehorsearmor.Main;
+import com.pekar.lymonitehorsearmor.items.ItemRegistry;
 import com.pekar.lymonitehorsearmor.utils.Utils;
 import net.minecraft.Util;
 import net.minecraft.core.Holder;
-import net.minecraft.core.registries.Registries;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
-import net.minecraft.tags.TagKey;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.equipment.ArmorMaterial;
-import net.minecraft.world.item.equipment.ArmorType;
+import net.minecraft.world.item.ArmorItem;
+import net.minecraft.world.item.ArmorMaterial;
+import net.minecraft.world.item.crafting.Ingredient;
 
 import java.util.EnumMap;
-
-import static com.pekar.lymonitehorsearmor.utils.Resources.createResourceLocation;
+import java.util.List;
+import java.util.function.Supplier;
 
 // Durability:
 // LEATHER: 5
@@ -26,32 +25,31 @@ import static com.pekar.lymonitehorsearmor.utils.Resources.createResourceLocatio
 
 public class ModArmorMaterial
 {
-    private final ArmorMaterial material;
+    private final Holder<ArmorMaterial> material;
     private final String materialName;
     private final int durabilityMultiplier;
-    private final EnumMap<ArmorType, Integer> armorResistanceMap;
+    private final EnumMap<ArmorItem.Type, Integer> armorResistanceMap;
     private final int enchantmentValue;
     private final float toughness;
     private final float knockbackResistance;
     private final Holder<SoundEvent> equipmentSound;
-    private final TagKey<Item> repairIngredient;
+    private final Supplier<Ingredient> repairIngredient;
     private final boolean isFireResistant;
 
-    public static final String LIMONITE_MATERIAL_NAME = "limonite";
-    public static final TagKey<Item> LIMONITE_INGOT_TAG = TagKey.create(Registries.ITEM, createResourceLocation(Main.MODID, "limonite_ingot_tag"));
+    private static final String LIMONITE_MATERIAL_NAME = "limonite";
 
     // ArmorMaterials
 
-    protected static final ModArmorMaterial LIMONITE = new ModArmorMaterial(LIMONITE_MATERIAL_NAME, "limonite_armor",
+    public static final ModArmorMaterial LIMONITE = new ModArmorMaterial(LIMONITE_MATERIAL_NAME, "limonite_armor",
             createArmorTypeMap(2, 5, 7, 3, 9),
-            30, 1F, 0F, 23, SoundEvents.ARMOR_EQUIP_LEATHER, LIMONITE_INGOT_TAG, false);
+            30, 1F, 0F, 23, SoundEvents.ARMOR_EQUIP_LEATHER, () -> Ingredient.of(ItemRegistry.LYMONITE_INGOT.get()), false);
 
 
-    public ModArmorMaterial(String materialName, String armorModelName, EnumMap<ArmorType, Integer> armorResistanceMap,
+    public ModArmorMaterial(String materialName, String armorModelName, EnumMap<ArmorItem.Type, Integer> armorResistanceMap,
                             int enchantmentValue, float toughness, float knockbackResistance, int durabilityMultiplier,
-                            Holder<SoundEvent> equipmentSound, TagKey<Item> repairIngredient, boolean isFireResistant)
+                            Holder<SoundEvent> equipmentSound, Supplier<Ingredient> repairIngredient, boolean isFireResistant)
     {
-        this.material = createVanillaMaterial(armorModelName, durabilityMultiplier, armorResistanceMap, enchantmentValue, equipmentSound, toughness, knockbackResistance, repairIngredient);
+        this.material = createVanillaMaterial(armorModelName, armorResistanceMap, enchantmentValue, equipmentSound, toughness, knockbackResistance, repairIngredient);
         this.materialName = materialName;
         this.armorResistanceMap = armorResistanceMap;
         this.enchantmentValue = enchantmentValue;
@@ -63,7 +61,7 @@ public class ModArmorMaterial
         this.isFireResistant = isFireResistant;
     }
 
-    public ArmorMaterial getMaterial()
+    public Holder<ArmorMaterial> getMaterial()
     {
         return material;
     }
@@ -97,28 +95,34 @@ public class ModArmorMaterial
     }
 
     // copied from ArmorMaterials 1.21.1 and modified
-    private static ArmorMaterial createVanillaMaterial(
+    private static Holder<ArmorMaterial> createVanillaMaterial(
             String armorName,
-            int durability,
-            EnumMap<ArmorType, Integer> defence,
+            EnumMap<ArmorItem.Type, Integer> defence,
             int enchantmentValue,
             Holder<SoundEvent> equipSound,
             float toughness,
             float knockbackResistance,
-            TagKey<Item> repairIngredient)
+            Supplier<Ingredient> repairIngredient)
     {
-        var modelId = Utils.instance.resources.createEquipmentResourceKey(Main.MODID, armorName);
-        return new ArmorMaterial(durability, defence, enchantmentValue, equipSound, toughness, knockbackResistance, repairIngredient, modelId);
+        EnumMap<ArmorItem.Type, Integer> enummap = new EnumMap<>(ArmorItem.Type.class);
+
+        for (ArmorItem.Type armoritem$type : ArmorItem.Type.values()) {
+            enummap.put(armoritem$type, defence.get(armoritem$type));
+        }
+
+        var resourceLocation = Utils.instance.resources.createResourceLocation(Main.MODID, armorName);
+        var armorLayers = List.of(new ArmorMaterial.Layer(resourceLocation));
+        return Main.ARMOR_MATERIALS.register(armorName, () -> new ArmorMaterial(enummap, enchantmentValue, equipSound, repairIngredient, armorLayers, toughness, knockbackResistance));
     }
 
-    private static EnumMap<ArmorType, Integer> createArmorTypeMap(int bootsResistance, int leggingsResistance, int chestplateResistance, int helmetResistance, int bodyResistance)
+    private static EnumMap<ArmorItem.Type, Integer> createArmorTypeMap(int bootsResistance, int leggingsResistance, int chestplateResistance, int helmetResistance, int bodyResistance)
     {
-        return Util.make(new EnumMap<>(ArmorType.class), armorTypeMap -> {
-            armorTypeMap.put(ArmorType.BOOTS, bootsResistance);
-            armorTypeMap.put(ArmorType.LEGGINGS, leggingsResistance);
-            armorTypeMap.put(ArmorType.CHESTPLATE, chestplateResistance);
-            armorTypeMap.put(ArmorType.HELMET, helmetResistance);
-            armorTypeMap.put(ArmorType.BODY, bodyResistance);
+        return Util.make(new EnumMap<>(ArmorItem.Type.class), armorTypeMap -> {
+            armorTypeMap.put(ArmorItem.Type.BOOTS, bootsResistance);
+            armorTypeMap.put(ArmorItem.Type.LEGGINGS, leggingsResistance);
+            armorTypeMap.put(ArmorItem.Type.CHESTPLATE, chestplateResistance);
+            armorTypeMap.put(ArmorItem.Type.HELMET, helmetResistance);
+            armorTypeMap.put(ArmorItem.Type.BODY, bodyResistance);
         });
     }
 
