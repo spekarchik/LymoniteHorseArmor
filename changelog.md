@@ -1,3 +1,9 @@
+## 📦 Version 1.1.2
+
+### 📝 Improvements
+- Clarified horse armor tooltip for fall damage reduction.
+
+
 ## 📦 Version 1.1.0
 
 ### 🐞 Fixed
