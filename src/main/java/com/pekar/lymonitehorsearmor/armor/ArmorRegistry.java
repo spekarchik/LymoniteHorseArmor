@@ -18,13 +18,13 @@ public class ArmorRegistry
         // just to initialize static members
     }
 
-    private static <T extends ModArmor> DeferredItem<T> registerAnimalArmor(String name, ModArmorMaterial armorMaterial, ArmorType armorType,
+    private static <T extends ModAnimalArmor> DeferredItem<T> registerAnimalArmor(String name, ModArmorMaterial armorMaterial, ArmorType armorType,
                                                                             TriFunction<ModArmorMaterial, ArmorType, Item.Properties, T> armorConstructor)
     {
         return ITEMS.registerItem(name, p -> armorConstructor.apply(armorMaterial, armorType, p));
     }
 
-    private static <T extends ModArmor> DeferredItem<T> registerAnimalArmor(String name, ModArmorMaterial armorMaterial, ArmorType armorSlotType, AnimalArmorType armorType,
+    private static <T extends ModAnimalArmor> DeferredItem<T> registerAnimalArmor(String name, ModArmorMaterial armorMaterial, ArmorType armorSlotType, AnimalArmorType armorType,
                                                                             QuadFunction<ModArmorMaterial, ArmorType, AnimalArmorType, Item.Properties, T> armorConstructor)
     {
         return ITEMS.registerItem(name, p -> armorConstructor.apply(armorMaterial, armorSlotType, armorType, p));
