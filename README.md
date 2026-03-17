@@ -29,11 +29,12 @@ The armor can be discovered during exploration, or crafted if you uncover the fo
 
 **Possible loot:**
 
-- **Lymonite Horse Armor** – 25% chance
-- **Lymonite Ingot** – 25% chance
+- **Lymonite Horse Armor** – 17% chance
+- **Lymonite Ingot** – 17% chance
+- **Lymonite Mixture** – 17% chance
 - Nothing – 50% chance
 
-Both the armor and the ingot can appear in **Jungle Temple** and **Woodland Mansion** chests.
+The armor, ingot, and mixture can all appear in **Jungle Temple** and **Woodland Mansion** chests.
 
 ### Crafting Lymonite Horse Armor
 
@@ -57,7 +58,7 @@ To craft Lymonite Horse Armor, players need **Lymonite Ingots**, which are made 
 
 **Lymonite Mixture** can be crafted using:
 - Raw Gold
-- Resin Clump
+- Resin Clump (or Slime Ball in 1.21.1)
 - Vine
 - Torchflower Seeds
 → Lymonite Mixture (unshaped recipe)
