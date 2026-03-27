@@ -1,3 +1,10 @@
+## 📦 Version 1.2.1
+
+### 📝 Updates
+- Added a homepage link to the mod metadata.
+- No gameplay changes.
+
+
 ## 📦 Version 1.2.0
 
 ### 📝 Improvements
