@@ -1,5 +1,7 @@
 ## 📦 Version 1.2.1
 
+- Now supports Minecraft 26.1.1
+
 ### 📝 Updates
 - Added a homepage link to the mod metadata.
 - No gameplay changes.
