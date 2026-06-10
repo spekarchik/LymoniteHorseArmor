@@ -4,7 +4,6 @@ import com.pekar.lymonitehorsearmor.events.effect.base.ITemporaryBaseArmorEffect
 import net.minecraft.core.Holder;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.level.Level;
 
 public abstract class Mob implements IMob
 {
@@ -15,21 +14,6 @@ public abstract class Mob implements IMob
     {
         tickCounter = (tickCounter + 1) % throttling;
         return tickCounter == 0;
-    }
-
-    public boolean isOverworld()
-    {
-        return getEntity().level().dimension().identifier().equals(Level.OVERWORLD.identifier());
-    }
-
-    public boolean isNether()
-    {
-        return getEntity().level().dimension().identifier().equals(Level.NETHER.identifier());
-    }
-
-    public boolean isEnd()
-    {
-        return getEntity().level().dimension().identifier().equals(Level.END.identifier());
     }
 
     public boolean isEffectActive(Holder<MobEffect> effect)
