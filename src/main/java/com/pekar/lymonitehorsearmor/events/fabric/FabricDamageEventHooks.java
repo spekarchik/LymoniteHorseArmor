@@ -38,6 +38,7 @@ public final class FabricDamageEventHooks
         return event.getNewDamage();
     }
 
+    // Not need for horse armor
     public static float modifyArmorDamage(LivingEntity entity, EquipmentSlot slot, ItemStack stack, float damage)
     {
         var event = new ArmorHurtEvent(entity, slot, stack, damage);
