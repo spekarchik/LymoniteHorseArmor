@@ -12,10 +12,6 @@ public interface IMob
 
     boolean every(int throttling);
 
-    boolean isOverworld();
-    boolean isNether();
-    boolean isEnd();
-
     boolean isEffectActive(Holder<MobEffect> effect);
     boolean hasArmorEffect(Holder<MobEffect> effect);
     boolean hasAnotherEffect(Holder<MobEffect> effect);
