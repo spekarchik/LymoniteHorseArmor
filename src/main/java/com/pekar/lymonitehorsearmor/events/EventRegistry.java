@@ -10,7 +10,6 @@ public class EventRegistry
         register(new TickEvents());
         register(new AnimalEvents());
         register(new LootEvents());
-        register(new CustomizationEvents());
     }
 
     private static void register(IEventHandler eventHandler)

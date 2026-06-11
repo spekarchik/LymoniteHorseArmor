@@ -1,3 +1,9 @@
+## 📦 Version 1.2.2
+
+### 📝 Improvements
+- Replaced the custom smithing menu with vanilla smithing behavior to improve compatibility with other mods.
+
+
 ## 📦 Version 1.2.1
 
 - Now supports Minecraft 26.1.1
