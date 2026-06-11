@@ -1,8 +1,5 @@
 package com.pekar.lymonitehorsearmor.armor;
 
-import com.pekar.lymonitehorsearmor.utils.QuadFunction;
-import com.pekar.lymonitehorsearmor.utils.TriFunction;
-import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
 import net.neoforged.neoforge.registries.DeferredItem;
 
@@ -24,17 +21,5 @@ public class ArmorRegistry
                                                                                   BiFunction<ModArmorMaterial, Item.Properties, T> armorConstructor)
     {
         return ITEMS.registerItem(name, p -> armorConstructor.apply(armorMaterial, p));
-    }
-
-    private static <T extends ModArmor> DeferredItem<T> registerAnimalArmor(String name, ModArmorMaterial armorMaterial, ArmorItem.Type armorType,
-                                                                            TriFunction<ModArmorMaterial, ArmorItem.Type, Item.Properties, T> armorConstructor)
-    {
-        return ITEMS.registerItem(name, p -> armorConstructor.apply(armorMaterial, armorType, p));
-    }
-
-    private static <T extends ModArmor> DeferredItem<T> registerAnimalArmor(String name, ModArmorMaterial armorMaterial, ArmorItem.Type armorSlotType, AnimalArmorType armorType,
-                                                                            QuadFunction<ModArmorMaterial, ArmorItem.Type, AnimalArmorType, Item.Properties, T> armorConstructor)
-    {
-        return ITEMS.registerItem(name, p -> armorConstructor.apply(armorMaterial, armorSlotType, armorType, p));
     }
 }
