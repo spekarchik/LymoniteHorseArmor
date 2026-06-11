@@ -1,5 +1,7 @@
 ## 📦 Version 1.2.2
 
+- Now available for Fabric.
+
 ### 📝 Improvements
 - Replaced the custom smithing menu with vanilla smithing behavior to improve compatibility with other mods.
 
