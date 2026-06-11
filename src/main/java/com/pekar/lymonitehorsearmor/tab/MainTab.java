@@ -1,7 +1,7 @@
 package com.pekar.lymonitehorsearmor.tab;
 
-import com.pekar.lymonitehorsearmor.Main;
 import com.pekar.lymonitehorsearmor.armor.ArmorRegistry;
+import com.pekar.lymonitehorsearmor.items.ItemRegistry;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -9,7 +9,6 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 
 import java.util.Collection;
-import java.util.stream.Collectors;
 
 public class MainTab extends ModTab
 {
@@ -22,7 +21,7 @@ public class MainTab extends ModTab
     @Override
     protected ItemStack getIconItem()
     {
-        return ArmorRegistry.HORSE_LYMONITE_ARMOR.asItem().getDefaultInstance();
+        return ArmorRegistry.HORSE_LYMONITE_ARMOR.getDefaultInstance();
     }
 
     @Override
@@ -30,7 +29,7 @@ public class MainTab extends ModTab
     {
         ArmorRegistry.initStatic();
 
-        return Main.ITEMS.getEntries().stream().map(x -> x.get()).collect(Collectors.toList()); // block items are also included
+        return ItemRegistry.getItems(); // block items are also included
     }
 
     @Override

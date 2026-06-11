@@ -5,6 +5,8 @@ import com.pekar.lymonitehorsearmor.items.ItemRegistry;
 import com.pekar.lymonitehorsearmor.utils.Utils;
 import net.minecraft.Util;
 import net.minecraft.core.Holder;
+import net.minecraft.core.Registry;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.ArmorItem;
@@ -42,7 +44,7 @@ public class ModArmorMaterial
 
     public static final ModArmorMaterial LIMONITE = new ModArmorMaterial(LIMONITE_MATERIAL_NAME, "limonite_armor",
             createArmorTypeMap(2, 5, 7, 3, 9),
-            30, 1F, 0F, 23, SoundEvents.ARMOR_EQUIP_LEATHER, () -> Ingredient.of(ItemRegistry.LYMONITE_INGOT.get()), false);
+            30, 1F, 0F, 23, SoundEvents.ARMOR_EQUIP_LEATHER, () -> Ingredient.of(ItemRegistry.LYMONITE_INGOT), false);
 
 
     public ModArmorMaterial(String materialName, String armorModelName, EnumMap<ArmorItem.Type, Integer> armorResistanceMap,
@@ -112,7 +114,8 @@ public class ModArmorMaterial
 
         var resourceLocation = Utils.instance.resources.createResourceLocation(Main.MODID, armorName);
         var armorLayers = List.of(new ArmorMaterial.Layer(resourceLocation));
-        return Main.ARMOR_MATERIALS.register(armorName, () -> new ArmorMaterial(enummap, enchantmentValue, equipSound, repairIngredient, armorLayers, toughness, knockbackResistance));
+        return Registry.registerForHolder(BuiltInRegistries.ARMOR_MATERIAL, resourceLocation,
+                new ArmorMaterial(enummap, enchantmentValue, equipSound, repairIngredient, armorLayers, toughness, knockbackResistance));
     }
 
     private static EnumMap<ArmorItem.Type, Integer> createArmorTypeMap(int bootsResistance, int leggingsResistance, int chestplateResistance, int helmetResistance, int bodyResistance)

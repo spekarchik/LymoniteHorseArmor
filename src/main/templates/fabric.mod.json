@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "${mod_id}",
+  "version": "${mod_version}",
+  "name": "${mod_name}",
+  "description": "${mod_description}",
+  "authors": [
+    "${mod_authors}"
+  ],
+  "entrypoints": {
+    "main": [
+      "com.pekar.lymonitehorsearmor.Main"
+    ]
+  },
+  "mixins": [
+    "${mod_id}.mixins.json"
+  ],
+  "contact": {
+    "homepage": "${home_page}",
+    "sources": "https://github.com/spekarchik/LymoniteHorseArmor"
+  },
+  "license": "${mod_license}",
+  "icon": "${logo}",
+  "environment": "*",
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "minecraft": "${minecraft_version}",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}

@@ -1,16 +1,14 @@
 package com.pekar.lymonitehorsearmor.events;
 
 import com.pekar.lymonitehorsearmor.events.animal.IAnimal;
-import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.neoforge.event.entity.living.ArmorHurtEvent;
-import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
-import net.neoforged.neoforge.event.entity.living.LivingIncomingDamageEvent;
+import com.pekar.lymonitehorsearmor.events.params.ArmorHurtEvent;
+import com.pekar.lymonitehorsearmor.events.params.LivingDamageEvent;
+import com.pekar.lymonitehorsearmor.events.params.LivingIncomingDamageEvent;
 
 public class AnimalEvents implements IEventHandler
 {
     private final IAnimalManager animalManager = AnimalManager.instance();
 
-    @SubscribeEvent
     public void onLivingHurtEvent(LivingIncomingDamageEvent event)
     {
         var entity = event.getEntity();
@@ -23,7 +21,6 @@ public class AnimalEvents implements IEventHandler
         }
     }
 
-    @SubscribeEvent
     public void onLivingDamageEvent(LivingDamageEvent.Pre event)
     {
         var entity = event.getEntity();
@@ -36,7 +33,6 @@ public class AnimalEvents implements IEventHandler
         }
     }
 
-    @SubscribeEvent
     public void onArmorHurtEvent(ArmorHurtEvent event)
     {
         var entity = event.getEntity();

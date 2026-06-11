@@ -2,10 +2,15 @@
   "required": true,
   "minVersion": "0.8",
   "package": "com.pekar.lymonitehorsearmor.mixins",
-  "compatibilityLevel": "JAVA_13",
+  "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "ItemCombinerMenuAccessor",
+    "AbstractHorseMixin",
+    "EntityMixin",
+    "LivingEntityMixin",
+    "PersistentEntitySectionManagerMixin",
+    "TamableAnimalMixin",
     "PowderSnowBlockMixin",
+    "ItemCombinerMenuAccessor",
     "SmithingMenuMixin"
   ],
   "client": [],

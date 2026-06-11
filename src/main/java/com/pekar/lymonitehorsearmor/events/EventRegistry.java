@@ -1,19 +1,15 @@
 package com.pekar.lymonitehorsearmor.events;
 
-import static net.neoforged.neoforge.common.NeoForge.EVENT_BUS;
+import com.pekar.lymonitehorsearmor.events.fabric.FabricAnimalEventHooks;
+import com.pekar.lymonitehorsearmor.events.fabric.FabricDamageEventHooks;
+import com.pekar.lymonitehorsearmor.events.fabric.FabricLootEventHooks;
 
 public class EventRegistry
 {
     public static void registerEvents()
     {
-        register((AnimalManager)AnimalManager.instance());
-        register(new TickEvents());
-        register(new AnimalEvents());
-        register(new LootEvents());
-    }
-
-    private static void register(IEventHandler eventHandler)
-    {
-        EVENT_BUS.register(eventHandler);
+        FabricAnimalEventHooks.init();
+        FabricDamageEventHooks.init();
+        FabricLootEventHooks.init();
     }
 }

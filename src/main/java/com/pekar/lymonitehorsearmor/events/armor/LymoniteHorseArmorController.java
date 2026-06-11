@@ -6,10 +6,10 @@ import com.pekar.lymonitehorsearmor.armor.ModAnimalArmor;
 import com.pekar.lymonitehorsearmor.events.animal.IAnimal;
 import com.pekar.lymonitehorsearmor.events.effect.HealthBoostAnimalPermanentArmorEffect;
 import com.pekar.lymonitehorsearmor.events.effect.base.IPermanentArmorEffect;
+import com.pekar.lymonitehorsearmor.events.params.LivingDamageEvent;
+import com.pekar.lymonitehorsearmor.events.params.LivingEquipmentChangeEvent;
+import com.pekar.lymonitehorsearmor.events.params.LivingIncomingDamageEvent;
 import net.minecraft.world.damagesource.DamageTypes;
-import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
-import net.neoforged.neoforge.event.entity.living.LivingEquipmentChangeEvent;
-import net.neoforged.neoforge.event.entity.living.LivingIncomingDamageEvent;
 
 public class LymoniteHorseArmorController extends AnimalArmor
 {
