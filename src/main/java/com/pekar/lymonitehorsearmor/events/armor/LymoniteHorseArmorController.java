@@ -7,8 +7,9 @@ import com.pekar.lymonitehorsearmor.events.animal.IAnimal;
 import com.pekar.lymonitehorsearmor.events.effect.HealthBoostAnimalPermanentArmorEffect;
 import com.pekar.lymonitehorsearmor.events.effect.base.IPermanentArmorEffect;
 import net.minecraft.world.damagesource.DamageTypes;
-import net.neoforged.neoforge.event.entity.EntityTravelToDimensionEvent;
-import net.neoforged.neoforge.event.entity.living.*;
+import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
+import net.neoforged.neoforge.event.entity.living.LivingEquipmentChangeEvent;
+import net.neoforged.neoforge.event.entity.living.LivingIncomingDamageEvent;
 
 public class LymoniteHorseArmorController extends AnimalArmor
 {
@@ -61,42 +62,7 @@ public class LymoniteHorseArmorController extends AnimalArmor
     }
 
     @Override
-    public void onLivingJumpEvent(LivingEvent.LivingJumpEvent event)
-    {
-
-    }
-
-    @Override
-    public void onLivingFallEvent(LivingFallEvent event)
-    {
-
-    }
-
-    @Override
-    public void onEntityTravelToDimensionEvent(EntityTravelToDimensionEvent event)
-    {
-
-    }
-
-    @Override
-    public void onBeingInLava()
-    {
-
-    }
-
-    @Override
-    public void onBeingInWater()
-    {
-    }
-
-    @Override
-    public void onBeingUnderRain()
-    {
-        clearFreeze();
-    }
-
-    @Override
-    public void onBeingInNormalEnvironment()
+    public void onBeingInArmor()
     {
         clearFreeze();
     }
@@ -109,10 +75,5 @@ public class LymoniteHorseArmorController extends AnimalArmor
             var ticksFrozen = entity.getTicksFrozen();
             entity.setTicksFrozen(Math.max(0, ticksFrozen - 4));
         }
-    }
-
-    @Override
-    public void onEffectAddedEvent(MobEffectEvent.Added event)
-    {
     }
 }

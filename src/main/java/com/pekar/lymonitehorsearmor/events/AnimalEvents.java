@@ -1,27 +1,14 @@
 package com.pekar.lymonitehorsearmor.events;
 
 import com.pekar.lymonitehorsearmor.events.animal.IAnimal;
-import com.pekar.lymonitehorsearmor.events.armor.IAnimalArmorEvents;
 import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.neoforge.event.entity.EntityTravelToDimensionEvent;
-import net.neoforged.neoforge.event.entity.living.*;
+import net.neoforged.neoforge.event.entity.living.ArmorHurtEvent;
+import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
+import net.neoforged.neoforge.event.entity.living.LivingIncomingDamageEvent;
 
 public class AnimalEvents implements IEventHandler
 {
     private final IAnimalManager animalManager = AnimalManager.instance();
-
-    @SubscribeEvent
-    public void onEntityTravelToDimensionEvent(EntityTravelToDimensionEvent event)
-    {
-        var entity = event.getEntity();
-        IAnimal animal = animalManager.getAnimalByUUID(entity.getUUID());
-        if (animal == null) return;
-
-        for (IAnimalArmorEvents armor : animal.getArmorTypesUsed())
-        {
-            armor.onEntityTravelToDimensionEvent(event);
-        }
-    }
 
     @SubscribeEvent
     public void onLivingHurtEvent(LivingIncomingDamageEvent event)
@@ -59,43 +46,6 @@ public class AnimalEvents implements IEventHandler
         for (var armor : animal.getArmorTypesUsed())
         {
             armor.onArmorHurtEvent(event);
-        }
-    }
-
-    @SubscribeEvent
-    public void onEffectAdded(MobEffectEvent.Added event)
-    {
-        var entity = event.getEntity();
-        var animal = animalManager.getAnimalByUUID(entity.getUUID());
-        if (animal == null) return;
-
-        for (var armor : animal.getArmorTypesUsed())
-        {
-            armor.onEffectAddedEvent(event);
-        }
-    }
-
-    @SubscribeEvent
-    public void onLivingJumpEvent(LivingEvent.LivingJumpEvent event)
-    {
-        var animal = animalManager.getAnimalByUUID(event.getEntity().getUUID());
-        if (animal == null) return;
-
-        for (var armor : animal.getArmorTypesUsed())
-        {
-            armor.onLivingJumpEvent(event);
-        }
-    }
-
-    @SubscribeEvent
-    public void onLivingFallEvent(LivingFallEvent event)
-    {
-        var animal = animalManager.getAnimalByUUID(event.getEntity().getUUID());
-        if (animal == null) return;
-
-        for (var armor : animal.getArmorTypesUsed())
-        {
-            armor.onLivingFallEvent(event);
         }
     }
 }
