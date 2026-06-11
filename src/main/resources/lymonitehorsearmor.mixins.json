@@ -4,7 +4,9 @@
   "package": "com.pekar.lymonitehorsearmor.mixins",
   "compatibilityLevel": "JAVA_13",
   "mixins": [
-    "PowderSnowBlockMixin"
+    "ItemCombinerMenuAccessor",
+    "PowderSnowBlockMixin",
+    "SmithingMenuMixin"
   ],
   "client": [],
   "injectors": {
