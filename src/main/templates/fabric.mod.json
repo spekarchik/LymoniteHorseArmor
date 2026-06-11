@@ -16,11 +16,11 @@
     "lymonitehorsearmor.mixins.json"
   ],
   "contact": {
-    "homepage": "https://www.curseforge.com/minecraft/mc-mods/lymonite-horse-armor",
+    "homepage": "${home_page}",
     "sources": "https://github.com/spekarchik/LymoniteHorseArmor"
   },
   "license": "${mod_license}",
-  "icon": "logo.png",
+  "icon": "${logo}",
   "environment": "*",
   "depends": {
     "fabricloader": ">=${loader_version}",
