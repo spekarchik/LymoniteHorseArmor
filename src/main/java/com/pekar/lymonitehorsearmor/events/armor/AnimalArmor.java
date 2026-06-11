@@ -3,9 +3,9 @@ package com.pekar.lymonitehorsearmor.events.armor;
 import com.pekar.lymonitehorsearmor.armor.AnimalArmorType;
 import com.pekar.lymonitehorsearmor.armor.ModAnimalArmor;
 import com.pekar.lymonitehorsearmor.events.animal.IAnimal;
+import com.pekar.lymonitehorsearmor.events.params.ArmorHurtEvent;
 import com.pekar.lymonitehorsearmor.events.mob.IMob;
 import net.minecraft.world.entity.EquipmentSlot;
-import net.neoforged.neoforge.event.entity.living.ArmorHurtEvent;
 
 abstract class AnimalArmor extends ArmorBase implements IAnimalArmor
 {

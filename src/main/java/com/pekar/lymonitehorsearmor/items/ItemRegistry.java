@@ -1,18 +1,47 @@
 package com.pekar.lymonitehorsearmor.items;
 
-import com.pekar.lymonitehorsearmor.Main;
+import net.minecraft.core.Registry;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
-import net.neoforged.neoforge.registries.DeferredItem;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.function.Function;
+
+import static com.pekar.lymonitehorsearmor.Main.MODID;
+import static com.pekar.lymonitehorsearmor.utils.Resources.createResourceLocation;
 
 public class ItemRegistry
 {
-    public static final DeferredItem<Item> LYMONITE_MIXTURE = Main.ITEMS.registerItem("lymonite_mixture", ModItem::new);
-    public static final DeferredItem<Item> LYMONITE_INGOT = Main.ITEMS.registerItem("lymonite_ingot", ModItem::new);
-    public static final DeferredItem<Item> HORSE_ARMOR_HANDBOOK = Main.ITEMS.registerItem("horse_armor_handbook", AnimalArmorHandbook::new, p -> p.rarity(Rarity.UNCOMMON).stacksTo(4));
+    private static final List<Item> ITEMS = new ArrayList<>();
+
+    public static final TagKey<Item> LIMONITE_INGOT_TAG = TagKey.create(Registries.ITEM, createResourceLocation(MODID, "limonite_ingot_tag"));
+
+    public static final Item LYMONITE_MIXTURE = registerItem("lymonite_mixture", ModItem::new);
+    public static final Item LYMONITE_INGOT = registerItem("lymonite_ingot", ModItem::new);
+    public static final Item HORSE_ARMOR_HANDBOOK = registerItem("horse_armor_handbook", p -> new AnimalArmorHandbook(p.rarity(Rarity.UNCOMMON).stacksTo(4)));
 
     public static void initStatic()
     {
         // just to initialize static members
+    }
+
+    public static List<Item> getItems()
+    {
+        return Collections.unmodifiableList(ITEMS);
+    }
+
+    public static <T extends Item> T registerItem(String name, Function<Item.Properties, T> itemFactory)
+    {
+        var id = createResourceLocation(MODID, name);
+        var key = ResourceKey.create(Registries.ITEM, id);
+        var item = itemFactory.apply(new Item.Properties().setId(key));
+        ITEMS.add(item);
+        return Registry.register(BuiltInRegistries.ITEM, id, item);
     }
 }

@@ -3,14 +3,13 @@ package com.pekar.lymonitehorsearmor.events;
 import com.pekar.lymonitehorsearmor.events.animal.IAnimal;
 import com.pekar.lymonitehorsearmor.events.animal.ModAnimal;
 import com.pekar.lymonitehorsearmor.events.armor.IAnimalArmor;
+import com.pekar.lymonitehorsearmor.events.params.AnimalTameEvent;
+import com.pekar.lymonitehorsearmor.events.params.EntityJoinLevelEvent;
+import com.pekar.lymonitehorsearmor.events.params.EntityLeaveLevelEvent;
+import com.pekar.lymonitehorsearmor.events.params.LivingEquipmentChangeEvent;
 import net.minecraft.world.entity.TamableAnimal;
 import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.animal.equine.AbstractHorse;
-import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.neoforge.event.entity.EntityJoinLevelEvent;
-import net.neoforged.neoforge.event.entity.EntityLeaveLevelEvent;
-import net.neoforged.neoforge.event.entity.living.AnimalTameEvent;
-import net.neoforged.neoforge.event.entity.living.LivingEquipmentChangeEvent;
 
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
@@ -43,7 +42,6 @@ public class AnimalManager implements IAnimalManager, IEventHandler
         animal.updateArmorUsed();
     }
 
-    @SubscribeEvent
     public void onEntityJoinLevelEvent(EntityJoinLevelEvent event)
     {
         if (event.getLevel().isClientSide()) return;
@@ -58,7 +56,6 @@ public class AnimalManager implements IAnimalManager, IEventHandler
         }
     }
 
-    @SubscribeEvent
     public void onEntityTameEvent(AnimalTameEvent event)
     {
         if (event.getEntity().level().isClientSide()) return;
@@ -70,7 +67,6 @@ public class AnimalManager implements IAnimalManager, IEventHandler
         }
     }
 
-    @SubscribeEvent
     public void onEntityLeaveLevelEvent(EntityLeaveLevelEvent event)
     {
         if (event.getLevel().isClientSide()) return;
@@ -84,7 +80,6 @@ public class AnimalManager implements IAnimalManager, IEventHandler
         }
     }
 
-    @SubscribeEvent
     public void onEquipmentChangeEvent(LivingEquipmentChangeEvent event)
     {
         var entity = event.getEntity();

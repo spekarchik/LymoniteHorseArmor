@@ -54,7 +54,6 @@ public abstract class ModArmor extends Item implements ITooltipProvider
         return components().getOrDefault(DataComponents.MAX_DAMAGE, maxDamage);
     }
 
-    @Override
     public boolean canWalkOnPowderedSnow(ItemStack stack, LivingEntity wearer)
     {
         return stack.is(Items.LEATHER_BOOTS);

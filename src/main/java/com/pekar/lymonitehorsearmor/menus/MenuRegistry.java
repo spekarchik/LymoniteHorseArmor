@@ -1,17 +1,29 @@
 package com.pekar.lymonitehorsearmor.menus;
 
-import com.pekar.lymonitehorsearmor.Main;
+import net.minecraft.core.Registry;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.inventory.MenuType;
-import net.neoforged.neoforge.registries.DeferredHolder;
+
+import static com.pekar.lymonitehorsearmor.Main.MODID;
+import static com.pekar.lymonitehorsearmor.utils.Resources.createResourceLocation;
 
 public class MenuRegistry
 {
-    public static final DeferredHolder<MenuType<?>, MenuType<CustomSmithingMenu>> CUSTOM_SMITHING_MENU =
-            Main.MENUS.register("custom_smithing", () -> new MenuType<CustomSmithingMenu>(CustomSmithingMenu::new, FeatureFlags.DEFAULT_FLAGS));
+    public static final MenuType<CustomSmithingMenu> CUSTOM_SMITHING_MENU =
+            register("custom_smithing", new MenuType<>(CustomSmithingMenu::new, FeatureFlags.DEFAULT_FLAGS));
 
     public static void initStatic()
     {
         // just to initialize static members
+    }
+
+    private static <T extends MenuType<?>> T register(String name, T menuType)
+    {
+        var id = createResourceLocation(MODID, name);
+        var key = ResourceKey.create(Registries.MENU, id);
+        return Registry.register(BuiltInRegistries.MENU, key, menuType);
     }
 }

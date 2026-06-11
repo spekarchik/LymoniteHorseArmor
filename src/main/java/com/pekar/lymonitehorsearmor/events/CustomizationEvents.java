@@ -1,5 +1,6 @@
 package com.pekar.lymonitehorsearmor.events;
 
+import com.pekar.lymonitehorsearmor.events.params.RightClickBlockEvent;
 import com.pekar.lymonitehorsearmor.menus.CustomSmithingMenuProvider;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerPlayer;
@@ -9,13 +10,10 @@ import net.minecraft.world.inventory.ContainerLevelAccess;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
-import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
 
 public class CustomizationEvents implements IEventHandler
 {
-    @SubscribeEvent
-    public void onRightClickBlock(PlayerInteractEvent.RightClickBlock event)
+    public void onRightClickBlock(RightClickBlockEvent event)
     {
         Level level = event.getLevel();
         BlockPos pos = event.getPos();

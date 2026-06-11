@@ -16,8 +16,6 @@ public class Utils
 
     public static Random random = new Random();
 
-    public final Dimensions dimension = new Dimensions();
-    public final Player player = new Player();
     public final Resources resources = new Resources();
     public final Text text = new Text();
 

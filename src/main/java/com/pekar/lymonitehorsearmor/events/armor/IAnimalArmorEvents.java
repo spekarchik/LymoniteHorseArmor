@@ -1,9 +1,9 @@
 package com.pekar.lymonitehorsearmor.events.armor;
 
-import net.neoforged.neoforge.event.entity.living.ArmorHurtEvent;
-import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
-import net.neoforged.neoforge.event.entity.living.LivingEquipmentChangeEvent;
-import net.neoforged.neoforge.event.entity.living.LivingIncomingDamageEvent;
+import com.pekar.lymonitehorsearmor.events.params.ArmorHurtEvent;
+import com.pekar.lymonitehorsearmor.events.params.LivingDamageEvent;
+import com.pekar.lymonitehorsearmor.events.params.LivingEquipmentChangeEvent;
+import com.pekar.lymonitehorsearmor.events.params.LivingIncomingDamageEvent;
 
 public interface IAnimalArmorEvents
 {
