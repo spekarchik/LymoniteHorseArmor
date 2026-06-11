@@ -9,7 +9,9 @@
     "LivingEntityMixin",
     "PersistentEntitySectionManagerMixin",
     "TamableAnimalMixin",
-    "PowderSnowBlockMixin"
+    "PowderSnowBlockMixin",
+    "ItemCombinerMenuAccessor",
+    "SmithingMenuMixin"
   ],
   "client": [],
   "injectors": {
