@@ -24,14 +24,7 @@ public class TickEvents implements IEventHandler
 
         for (var armor : animal.getArmorTypesUsed())
         {
-            if (animalEntity.isInWater())
-                armor.onBeingInWater();
-            else if (animalEntity.isInWaterOrRain())
-                armor.onBeingUnderRain();
-            else if (animalEntity.isInLava())
-                armor.onBeingInLava();
-            else
-                armor.onBeingInNormalEnvironment();
+            armor.onBeingInArmor();
         }
     }
 }
