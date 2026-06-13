@@ -5,7 +5,7 @@
   "author": "Sergey Pekarchik",
 
   "itemGroup.lymonitehorsearmor": "Lymonite Horse Armor",
-  "itemGroup.main_tab": "Lymonite Horse Armor",
+  "itemGroup.lymonitehorsearmor.main_tab": "Lymonite Horse Armor",
 
   "item.lymonitehorsearmor.horse_lymonite_armor": "Лаймонитовая конская броня",
   "item.lymonitehorsearmor.horse_lymonite_armor.desc0": "Встречается в Храмах в Джунглях или в Лесных Особняках",
