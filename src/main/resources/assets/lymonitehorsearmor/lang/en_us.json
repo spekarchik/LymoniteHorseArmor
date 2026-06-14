@@ -5,7 +5,7 @@
   "author": "Sergey Pekarchik",
 
   "itemGroup.lymonitehorsearmor": "Lymonite Horse Armor",
-  "itemGroup.main_tab": "Lymonite Horse Armor",
+  "itemGroup.lymonitehorsearmor.main_tab": "Lymonite Horse Armor",
 
   "item.lymonitehorsearmor.horse_lymonite_armor": "Lymonite Horse Armor",
   "item.lymonitehorsearmor.horse_lymonite_armor.desc0": "Found in Jungle Temples or Woodland Mansions",
