@@ -12,7 +12,7 @@ public class Text
 
     }
 
-    public boolean showExtendedDescription(ITooltip tooltip, TooltipFlag flag)
+    public static boolean showExtendedDescription(ITooltip tooltip, TooltipFlag flag)
     {
         if (!hasShiftDown())
         {
@@ -23,7 +23,7 @@ public class Text
         return true;
     }
 
-    public boolean hasShiftDown()
+    public static boolean hasShiftDown()
     {
         var window = Minecraft.getInstance().getWindow();
         return InputConstants.isKeyDown(window, InputConstants.KEY_LSHIFT)
