@@ -2,7 +2,7 @@ package com.pekar.lymonitehorsearmor.armor;
 
 import com.pekar.lymonitehorsearmor.tooltip.ITooltip;
 import com.pekar.lymonitehorsearmor.tooltip.TextStyle;
-import com.pekar.lymonitehorsearmor.utils.Utils;
+import com.pekar.lymonitehorsearmor.utils.Text;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 
@@ -16,13 +16,13 @@ public class ModHorseArmor extends ModAnimalArmor
     @Override
     public void addTooltip(ItemStack stack, TooltipContext context, ITooltip tooltip, TooltipFlag flag)
     {
-        if (!Utils.instance.text.hasShiftDown())
+        if (!Text.hasShiftDown())
         {
             tooltip.addLineById("description.press_shift").apply();
             return;
         }
 
-        if (Utils.instance.text.hasShiftDown())
+        if (Text.hasShiftDown())
         {
             tooltip.ignoreEmptyLines();
 

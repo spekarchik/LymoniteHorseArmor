@@ -2,7 +2,6 @@ package com.pekar.lymonitehorsearmor.armor;
 
 import com.pekar.lymonitehorsearmor.Main;
 import com.pekar.lymonitehorsearmor.items.ItemRegistry;
-import com.pekar.lymonitehorsearmor.utils.Utils;
 import net.minecraft.Util;
 import net.minecraft.core.Holder;
 import net.minecraft.core.Registry;
@@ -16,6 +15,8 @@ import net.minecraft.world.item.crafting.Ingredient;
 import java.util.EnumMap;
 import java.util.List;
 import java.util.function.Supplier;
+
+import static com.pekar.lymonitehorsearmor.utils.Resources.createResourceLocation;
 
 // Durability:
 // LEATHER: 5
@@ -112,7 +113,7 @@ public class ModArmorMaterial
             enummap.put(armoritem$type, defence.get(armoritem$type));
         }
 
-        var resourceLocation = Utils.instance.resources.createResourceLocation(Main.MODID, armorName);
+        var resourceLocation = createResourceLocation(Main.MODID, armorName);
         var armorLayers = List.of(new ArmorMaterial.Layer(resourceLocation));
         return Registry.registerForHolder(BuiltInRegistries.ARMOR_MATERIAL, resourceLocation,
                 new ArmorMaterial(enummap, enchantmentValue, equipSound, repairIngredient, armorLayers, toughness, knockbackResistance));

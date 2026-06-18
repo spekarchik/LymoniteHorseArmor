@@ -1,3 +1,9 @@
+## 📦 Version 1.2.5
+
+### 📝 Improvements
+- Improved dedicated server compatibility.
+
+
 ## 📦 Version 1.2.4
 
 ### 📝 Improvements
