@@ -1,7 +1,6 @@
 package com.pekar.lymonitehorsearmor.armor;
 
 import com.pekar.lymonitehorsearmor.Main;
-import com.pekar.lymonitehorsearmor.utils.Utils;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.sounds.SoundEvent;
@@ -14,6 +13,7 @@ import net.minecraft.world.item.equipment.ArmorType;
 
 import java.util.EnumMap;
 
+import static com.pekar.lymonitehorsearmor.utils.Resources.createEquipmentResourceKey;
 import static com.pekar.lymonitehorsearmor.utils.Resources.createResourceLocation;
 
 // Durability:
@@ -107,7 +107,7 @@ public class ModArmorMaterial
             float knockbackResistance,
             TagKey<Item> repairIngredient)
     {
-        var modelId = Utils.instance.resources.createEquipmentResourceKey(Main.MODID, armorName);
+        var modelId = createEquipmentResourceKey(Main.MODID, armorName);
         return new ArmorMaterial(durability, defence, enchantmentValue, equipSound, toughness, knockbackResistance, repairIngredient, modelId);
     }
 
