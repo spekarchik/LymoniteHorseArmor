@@ -1,6 +1,5 @@
 package com.pekar.lymonitehorsearmor.events.armor;
 
-import com.pekar.lymonitehorsearmor.utils.Utils;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.entity.Entity;
@@ -12,8 +11,6 @@ import net.minecraft.world.entity.monster.spider.Spider;
 
 abstract class ArmorBase implements IArmor
 {
-    protected Utils utils = new Utils();
-
     protected boolean isFreezeDamage(DamageSource damageSource)
     {
         return damageSource.is(DamageTypes.FREEZE);
