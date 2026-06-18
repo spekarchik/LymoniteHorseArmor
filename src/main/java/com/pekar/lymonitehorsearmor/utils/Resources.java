@@ -17,7 +17,7 @@ public class Resources
         return Identifier.fromNamespaceAndPath(namespace, name); //was: new ResourceLocation(name),
     }
 
-    public ResourceKey<EquipmentAsset> createEquipmentResourceKey(String namespace, String armorName)
+    public static ResourceKey<EquipmentAsset> createEquipmentResourceKey(String namespace, String armorName)
     {
         return ResourceKey.create(
                 EquipmentAssets.ROOT_ID,
