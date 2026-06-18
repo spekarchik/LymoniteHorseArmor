@@ -3,7 +3,7 @@ package com.pekar.lymonitehorsearmor.items;
 import com.pekar.lymonitehorsearmor.tooltip.ITooltip;
 import com.pekar.lymonitehorsearmor.tooltip.ITooltipProvider;
 import com.pekar.lymonitehorsearmor.tooltip.TextStyle;
-import com.pekar.lymonitehorsearmor.utils.Utils;
+import com.pekar.lymonitehorsearmor.utils.Text;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.ItemStack;
@@ -28,7 +28,7 @@ public class AnimalArmorHandbook extends ModItem implements ITooltipProvider
     @Override
     public void addTooltip(ItemStack stack, TooltipContext context, ITooltip tooltip, TooltipFlag flag)
     {
-        if (!Utils.instance.text.showExtendedDescription(tooltip, flag)) return;
+        if (!Text.showExtendedDescription(tooltip, flag)) return;
 
         for (int i = 1; i <= 3; i++)
         {
