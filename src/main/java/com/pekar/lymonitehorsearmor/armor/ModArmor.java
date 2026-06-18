@@ -1,7 +1,6 @@
 package com.pekar.lymonitehorsearmor.armor;
 
 import com.pekar.lymonitehorsearmor.tooltip.ITooltipProvider;
-import com.pekar.lymonitehorsearmor.utils.Utils;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.LivingEntity;
@@ -14,7 +13,6 @@ public abstract class ModArmor extends Item implements ITooltipProvider, IModArm
     protected final ArmorItem.Type armorSlotType;
     protected final int maxDamage;
     protected final ModArmorMaterial material;
-    protected final Utils utils = new Utils();
 
     public ModArmor(ModArmorMaterial material, ArmorItem.Type armorSlotType, Properties properties)
     {

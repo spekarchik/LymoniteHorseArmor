@@ -10,7 +10,7 @@ public class Text
 
     }
 
-    public boolean showExtendedDescription(ITooltip tooltip, TooltipFlag flag)
+    public static boolean showExtendedDescription(ITooltip tooltip, TooltipFlag flag)
     {
         if (!flag.hasShiftDown())
         {
