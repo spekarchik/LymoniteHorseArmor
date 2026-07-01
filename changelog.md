@@ -1,5 +1,11 @@
 ## 📦 Version 1.2.5
 
+- Corrected the minimum required *Fabric Loader* version for MC 26.2.
+- Promoted to **Release**.
+
+
+## 📦 Version 1.2.5-beta
+
 ### 📝 Improvements
 - Improved dedicated server compatibility.
 
