@@ -1,5 +1,10 @@
 ## 📦 Version 1.2.5
 
+- Promoted to **Release**.
+
+
+## 📦 Version 1.2.5-beta
+
 ### 📝 Improvements
 - Improved dedicated server compatibility.
 
