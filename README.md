@@ -102,14 +102,13 @@ Today, the only known pieces of **Lymonite Horse Armor** are those hidden away i
 # 🛠️ Installation and Technical Information
 
 ## Installation
-- **This branch:** Minecraft **26.3-pre-1**, **Fabric Loader 0.19.5+**, **Fabric API 0.159.2+26.3**, and **Java 25**.
-- Install the matching Fabric Loader and Fabric API versions listed above.
+- Make sure you have **Minecraft 1.21.1, 1.21.4 - 1.21.11, 26.1-26.3** with **NeoForge** installed.
 - Download the mod `.jar` file.
 - Place it into your `mods` folder.
 - Launch the game and enjoy your adventure!
 
 ## Technical Details
-- **Minecraft version for this branch:** 26.3-pre-1 (Fabric)
+- **Supported Minecraft versions:** 1.21.1, 1.21.4 - 1.21.11, 26.1-26.3
 - **Texture resolution:** 16×16
 - **Localizations:** English, Belarusian, Russian, Polish
 - **Loot table compatibility:** the mod does not overwrite vanilla loot tables and injects additional loot rolls via events, making it compatible with mods and datapacks that modify loot tables
