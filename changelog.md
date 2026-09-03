@@ -1,3 +1,10 @@
+## Minecraft 26.3-pre-1 (Fabric)
+
+- Updated to Minecraft 26.3-pre-1, Fabric Loader 0.19.5, and Fabric API 0.159.2+26.3.
+- Updated Fabric Loom to 1.17.20 and Gradle to 9.5.1.
+- Adapted chest loot rolls and Shift-key tooltip detection to the new Minecraft APIs.
+
+
 ## 📦 Version 1.2.5
 
 - Corrected the minimum required *Fabric Loader* version for MC 26.2.

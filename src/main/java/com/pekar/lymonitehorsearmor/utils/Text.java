@@ -2,7 +2,6 @@ package com.pekar.lymonitehorsearmor.utils;
 
 import com.mojang.blaze3d.platform.InputConstants;
 import com.pekar.lymonitehorsearmor.tooltip.ITooltip;
-import net.minecraft.client.Minecraft;
 import net.minecraft.world.item.TooltipFlag;
 
 public class Text
@@ -25,8 +24,7 @@ public class Text
 
     public static boolean hasShiftDown()
     {
-        var window = Minecraft.getInstance().getWindow();
-        return InputConstants.isKeyDown(window, InputConstants.KEY_LSHIFT)
-                || InputConstants.isKeyDown(window, InputConstants.KEY_RSHIFT);
+        return InputConstants.isKeyDown(InputConstants.KEY_LSHIFT)
+                || InputConstants.isKeyDown(InputConstants.KEY_RSHIFT);
     }
 }
