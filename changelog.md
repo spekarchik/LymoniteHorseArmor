@@ -1,3 +1,8 @@
+## 📦 Version 1.2.5-beta
+
+- Now supports Minecraft 26.3
+
+
 ## Minecraft 26.3-pre-1 (Fabric)
 
 - Updated to Minecraft 26.3-pre-1, Fabric Loader 0.19.5, and Fabric API 0.159.2+26.3.
