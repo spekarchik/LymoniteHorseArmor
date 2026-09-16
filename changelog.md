@@ -1,6 +1,8 @@
 ## 📦 Version 1.2.5-beta
 
-- Now supports Minecraft 26.3
+- Now supports Minecraft 26.3.
+- Known issue on NeoForge 26.3.0.0-beta and 26.3.0.1-beta: on dedicated servers, players riding horses may be disconnected with `was kicked for floating a vehicle too long!`.
+  - The bug is not on the mod side and has already been reported to NeoForge.
 
 
 ## 📦 Version 1.2.4
