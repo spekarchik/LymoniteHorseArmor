@@ -1,3 +1,9 @@
+## 📦 Version 1.2.6-beta
+
+### 🐞 Fixed
+- Corrected the Lymonite Ingot blasting time for Minecraft 26.3.
+
+
 ## 📦 Version 1.2.5-beta
 
 - Now supports Minecraft 26.3.
