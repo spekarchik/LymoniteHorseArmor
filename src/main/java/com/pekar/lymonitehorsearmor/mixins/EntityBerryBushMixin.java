@@ -1,11 +1,9 @@
 package com.pekar.lymonitehorsearmor.mixins;
 
 import com.pekar.lymonitehorsearmor.armor.ArmorRegistry;
-import net.minecraft.util.Mth;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.MoverType;
 import net.minecraft.world.entity.animal.equine.Horse;
-import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
@@ -60,11 +58,8 @@ public abstract class EntityBerryBushMixin
             {
                 var belowPos = horse.getBlockPosBelowThatAffectsMyMovement();
                 float blockFriction = horse.level().getBlockState(belowPos).getFriction(horse.level(), belowPos, horse);
-                double groundRetention = Mth.clamp(1.0 - (1.0 - blockFriction)
-                        * horse.getAttributeValue(Attributes.FRICTION_MODIFIER), 0.0, 1.0);
-                double airRetention = Mth.clamp(1.0 - (1.0 - 0.91F)
-                        * horse.getAttributeValue(Attributes.AIR_DRAG_MODIFIER), 0.0, 1.0);
-                double retention = horse.shouldDiscardFriction() ? 1.0 : groundRetention * airRetention;
+                // 26.1.x uses fixed air drag; friction/air-drag attributes were added in 26.2.
+                double retention = horse.shouldDiscardFriction() ? 1.0 : blockFriction * 0.91F;
                 vanillaHorizontal *= 1.0 - retention;
             }
             double horizontal = 1.0 - (1.0 - vanillaHorizontal) * lymonitehorsearmor$slowdownStrength;
