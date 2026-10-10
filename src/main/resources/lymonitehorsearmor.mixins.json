@@ -4,6 +4,7 @@
   "package": "com.pekar.lymonitehorsearmor.mixins",
   "compatibilityLevel": "JAVA_13",
   "mixins": [
+    "EntityBerryBushMixin",
     "ItemCombinerMenuAccessor",
     "PowderSnowBlockMixin",
     "SmithingMenuMixin"
