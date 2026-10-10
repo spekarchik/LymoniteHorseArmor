@@ -3,6 +3,9 @@
 ### ✨ New
 - **Lymonite Horse Armor** now reduces Sweet Berry Bush slowdown by 50%.
 
+### 🐞 Fixed
+- Fixed a tracking cleanup issue that retained unarmored tamed horses after they left the level.
+
 
 ## 📦 Version 1.2.5
 
