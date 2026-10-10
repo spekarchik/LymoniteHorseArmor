@@ -19,6 +19,7 @@ However, rough terrain and Powder Snow often make long journeys frustrating.
 - 🧊 Grants **complete freezing immunity**
 - ❤️ **+4 extra hearts** to horse health
 - 🌵 Immunity to damage from **Sweet Berry Bushes and Cacti**
+- 🌿 Reduces **Sweet Berry Bush slowdown by 50%**
 - 🛡 Armor strength **between Gold and Diamond horse armor**
 - 🪂 Horses take **50% less fall damage** in addition to vanilla reduction
 - 🏔 Makes **mountain travel much more comfortable**
