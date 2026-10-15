@@ -58,7 +58,7 @@ public abstract class EntityBerryBushMixin
             {
                 var belowPos = horse.getBlockPosBelowThatAffectsMyMovement();
                 float blockFriction = horse.level().getBlockState(belowPos).getBlock().getFriction();
-                // 26.1.x uses fixed air drag; friction/air-drag attributes were added in 26.2.
+                // 1.21.11 uses fixed air drag; friction/air-drag attributes were added in 26.2.
                 double retention = horse.shouldDiscardFriction() ? 1.0 : blockFriction * 0.91F;
                 vanillaHorizontal *= 1.0 - retention;
             }

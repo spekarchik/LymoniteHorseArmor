@@ -28,7 +28,7 @@ public final class FabricAnimalEventHooks
         if (initialized) return;
         initialized = true;
 
-        ServerTickEvents.END_LEVEL_TICK.register(level ->
+        ServerTickEvents.END_WORLD_TICK.register(level ->
                 level.getAllEntities().forEach(entity ->
                         TICK_EVENTS.onLivingTick(new EntityTickEvent.Post(entity))));
     }
